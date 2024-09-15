@@ -6,7 +6,7 @@ const json=[
   {name:"游戏名",android:"安卓",pc:"pc",info:"备注"}
 ]
 export default async function Home() {
-  const games=await axios.get("/");
+  // const games=await axios.get("/");
   return (
     <div className={styles.page}>
   <Skeleton   paragraph={{ rows: 7}} />
