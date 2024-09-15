@@ -11,7 +11,7 @@ const info = () => {
       onOk() {},
     });
   };
-axios.defaults.baseURL="https://h.g13136918273.workers.dev/"
+// axios.defaults.baseURL="https://h.g13136918273.workers.dev/"
 axios.interceptors.response.use((response)=>{
    if(response.status=="200"){
      return response.data;
