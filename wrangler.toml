@@ -1,5 +1,0 @@
-name = "hhz"
-
-compatibility_flags = ["nodejs_compat"]
-
-[[kv_namespaces]] binding = "hhz"
