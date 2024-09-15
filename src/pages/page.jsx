@@ -3,8 +3,7 @@ import {Button, Table} from "antd"
 import process from "process"
 import fs from "node:fs"
 import path from "path";
-const curPth=process.cwd();
-const games=JSON.parse(fs.readFileSync(path.join(curPth,"./src/app/games.json5")));
+
 const columns = [
   {
     title: '游戏名',
@@ -26,7 +25,12 @@ const columns = [
     width: 200,
   }
 ];
-export default async function Home() {
+export const getStaticProps = (async (context) => {
+  const curPth=process.cwd();
+  const games=JSON.parse(fs.readFileSync(path.join(curPth,"./src/app/games.json5")));
+  return { games }
+})
+export default async function Home(props) {
   const info = (title,content) => {
     Modal.info({
       title,
@@ -45,7 +49,7 @@ export default async function Home() {
       {/* <Button type="primary" onClick={()=>info("关注博主")}>关注博主</Button>
         <Button type="primary" onClick={()=>info("加入我们","q群：221666602")}>加入我们</Button> */}
       </div>
-      <Table columns={columns} dataSource={games} pagination={{ pageSize: 50 }} scroll={{ y: 240 }} />
+      <Table columns={columns} dataSource={props.games} pagination={{ pageSize: 50 }} scroll={{ y: 240 }} />
     </div>
   );
 }
