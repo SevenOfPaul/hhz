@@ -7,7 +7,6 @@ const json=[
 ]
 export default async function Home() {
   const games=await axios.get("/");
-  console.log(games);
   return (
     <div className={styles.page}>
   <Skeleton   paragraph={{ rows: 7}} />
