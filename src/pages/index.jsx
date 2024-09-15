@@ -1,6 +1,5 @@
 import styles from "./page.module.css";
 import {Button, Table,Modal } from "antd"
-import Image from 'next/image'
 import process from "process"
 import fs from "node:fs"
 import path from "path";
