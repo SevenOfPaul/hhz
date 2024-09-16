@@ -1,6 +1,5 @@
 import styles from "./page.module.css";
 import { Table } from "antd"
-import axios from "../request"
 import Header from "@/components/Header";
 const columns = [
   {
@@ -24,10 +23,9 @@ const columns = [
   }
 ];
 export const getStaticProps = (async (context) => {
-  const res=await axios.get("https://h-bw3.pages.dev/games");
-  // axios.data
-  const games=JSON.stringify("");
-  return { props:{games} }
+  const curPth=process.cwd();
+  const games=fs.readFileSync(path.join(curPth,"./src/pages/games.json5"));
+  return { props:{games:games.toString()} };
 })
 export default function Home(props) {
   const games=JSON.parse(props.games);
