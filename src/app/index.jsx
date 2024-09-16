@@ -1,9 +1,6 @@
 import styles from "./page.module.css";
 import { Table } from "antd"
-import process from "process"
-import fs from "node:fs"
-import path from "path";
-
+import axios from "../request"
 import Header from "@/components/Header";
 const columns = [
   {
@@ -26,13 +23,10 @@ const columns = [
     width: 200,
   }
 ];
-export const getStaticProps = (async (context) => {
-  const curPth=process.cwd();
-  const games=fs.readFileSync(path.join(curPth,"./src/pages/games.json5"));
-  return { props:{games:games.toString()} }
-})
-export default  function Home(props) {
-  const games=JSON.parse(props.games)
+  const res=await axios.get("/games");
+  // const games=JSON.parse(res);
+export default async function Home(props) {
+  const games=JSON.parse(res);
   return (
     <div className={styles.page}>
        <Header title={"游戏合集"}/>
