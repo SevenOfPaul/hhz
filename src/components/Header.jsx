@@ -2,7 +2,7 @@ import React from 'react'
 import {Button,Modal} from "antd"
 import styles from "./Header.module.css"
 import img from "../public/gzh.jpg"
-export default function Header() {
+export default function Header(props) {
     const info = (title,content) => {
         Modal.info({
           title,
@@ -16,7 +16,7 @@ export default function Header() {
       };
   return (
     <div className={styles.header}>
-    <h1>游戏合集</h1>
+    <h1>{props.title}</h1>
     <div className={styles.content}>
     <Button type="primary" onClick={()=>info("关注博主",<img src={img.src}   width={300}
       height={300} />)}>关注博主</Button>

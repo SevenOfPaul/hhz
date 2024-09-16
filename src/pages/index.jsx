@@ -35,7 +35,7 @@ export default  function Home(props) {
   const games=JSON.parse(props.games)
   return (
     <div className={styles.page}>
-       <Header/>
+       <Header title={"游戏合集"}/>
       <Table columns={columns} dataSource={games} pagination={{ pageSize: 50 }} scroll={{ y: 400 }} />
     </div>
   );
