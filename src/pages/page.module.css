@@ -3,14 +3,3 @@
   margin: 0 auto;
   padding-top:3%;
 }
-.page h1{
-  margin :10px;
-}
-.header{
-  display: flex;
-  flex-direction: row;
-  justify-content: flex-end;
-}
-.header button{
-  margin :30px;
-}

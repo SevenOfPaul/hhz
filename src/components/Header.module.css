@@ -1,0 +1,11 @@
+.header h1{
+    margin :10px;
+  }
+  .content{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+  }
+  .content button{
+    margin :30px;
+  }

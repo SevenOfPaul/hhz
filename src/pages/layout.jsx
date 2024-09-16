@@ -1,5 +1,6 @@
 import localFont from "next/font/local";
 // import "./globals.css";
+import {Head} from 'next/document';
 import { AntdRegistry } from '@ant-design/nextjs-registry';
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
@@ -16,6 +17,8 @@ const geistMono = localFont({
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
+      <Head   rel="icon"
+            href="/favicon.ico"></Head>
       <body className={`${geistSans.variable} ${geistMono.variable}`}>
       <AntdRegistry>{children}</AntdRegistry>
       </body>
