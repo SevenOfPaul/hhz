@@ -1,4 +1,4 @@
-import process from "process"
+import process from "node:process"
 import fs from "node:fs"
 import path from "node:path";
 export function onRequest(context) {
