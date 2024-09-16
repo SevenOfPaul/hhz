@@ -1,6 +1,9 @@
 import styles from "./page.module.css";
 import { Table } from "antd"
 import Header from "@/components/Header";
+import process from "process"
+import fs from "node:fs"
+import path from "path";
 const columns = [
   {
     title: '游戏名',
