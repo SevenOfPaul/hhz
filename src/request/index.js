@@ -11,7 +11,7 @@ const info = () => {
       onOk() {},
     });
   };
-axios.defaults.baseURL="https://h-bw3.pages.dev"
+// axios.defaults.baseURL="https://h-bw3.pages.dev"
 axios.interceptors.response.use((response)=>{
    if(response.status=="200"){
      return response.data;

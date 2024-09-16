@@ -23,10 +23,14 @@ const columns = [
     width: 200,
   }
 ];
-  const res=await axios.get("/games");
-  // const games=JSON.parse(res);
-export default async function Home(props) {
-  const games=JSON.parse(res);
+export const getStaticProps = (async (context) => {
+  const res=await axios.get("https://h-bw3.pages.dev/games");
+  // axios.data
+  const games=JSON.stringify("");
+  return { props:{games} }
+})
+export default function Home(props) {
+  const games=JSON.parse(props.games);
   return (
     <div className={styles.page}>
        <Header title={"游戏合集"}/>
