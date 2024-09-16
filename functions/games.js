@@ -1,4 +1,4 @@
 export function onRequest(context) {
 
-    return new Response(JSON.stringify(context)+JSON.stringify(context.env))
+    return new Response(JSON.stringify(context.env.hhz.get("ki")))
   }
