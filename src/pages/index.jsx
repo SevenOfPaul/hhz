@@ -4,6 +4,7 @@ import Header from "@/components/Header";
 import process from "process"
 import fs from "node:fs"
 import path from "path";
+// import axios from "../request/index";
 const columns = [
   {
     title: '游戏名',
@@ -26,6 +27,8 @@ const columns = [
   }
 ];
 export const getStaticProps = (async (context) => {
+    //  const res=await axios("/games");
+    //  console.log(res)
   const curPth=process.cwd();
   const games=fs.readFileSync(path.join(curPth,"./src/pages/games.json5"));
   return { props:{games:games.toString()} };
