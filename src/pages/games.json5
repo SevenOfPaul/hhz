@@ -55,5 +55,10 @@
     "android": "",
     "pc": "https://pan.baidu.com/s/1nfJIpCcZtSL7X8cSVwBUmQ?pwd=r9k",
     "info": "解压密码：woaixiaocao;请将后缀改成rar再进行解压"
+  }, {
+    "name": "韵母攻略",
+    "android": "https://www.luegeng.com/api/txt_down.php?articleid=19914&articlename=%E9%9F%B5%E6%AF%8D%E6%94%BB%E7%95%A5",
+    "pc": "https://www.luegeng.com/api/txt_down.php?articleid=19914&articlename=%E9%9F%B5%E6%AF%8D%E6%94%BB%E7%95%A5",
+    "info": "注意这个不是游戏，是小说"
   }
 ]
