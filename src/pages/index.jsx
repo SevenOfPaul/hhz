@@ -1,10 +1,11 @@
 import styles from "./page.module.css";
 import { Table,Skeleton } from "antd"
+import Head from "next/head";
 import Header from "@/components/Header";
-import process from "process"
 import axios from "../request/index";
 import { useEffect, useState } from "react";
-export default function Home(props) {
+import ico from "../public/favicon.ico"
+export default function Home() {
   const columns = [
     {
       title: '游戏名',
@@ -32,8 +33,12 @@ export default function Home(props) {
     setData({loading:false,games});
    },[])
   return (
-    
     <div className={styles.page}>
+      <Head>
+      <title>{"游戏合集，你喜欢的游戏都在这里"}</title>
+        <meta property="og:title" content={data.games.map(g=>g.name).join(" ")} key={data.games.map(g=>g.name).join(" ")} />
+        <link rel="icon" type="image/x-icon" href={ico.src}></link>
+      </Head>
        <Header title={"游戏合集"}/>
      {data.loading?  
      <Skeleton  paragraph={{ rows: 8 }} />
