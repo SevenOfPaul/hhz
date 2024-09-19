@@ -38,7 +38,7 @@ export default function Home(props) {
   return (
     <div className={styles.page}>
        <Header title={"游戏合集"}/>
-      <Table columns={columns} dataSource={games} pagination={{ pageSize: 50 }} scroll={{ y: 400 }} />
+      <Table columns={columns} dataSource={games} pagination={{ pageSize: 30 }} scroll={{ y: 400 }} />
     </div>
   );
 }
