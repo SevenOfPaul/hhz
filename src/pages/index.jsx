@@ -27,7 +27,6 @@ export default function Home(props) {
     }
   ];
   let [data,setData]=useState({loading:true,games:[]});
-  
    useEffect(async ()=>{
     const games=await axios.get("/");
     setData({loading:false,games});
