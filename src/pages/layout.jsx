@@ -12,11 +12,6 @@ const geistMono = localFont({
   weight: "100 900",
 });
 
-export const metadata = {
-  icons: {
-    icon: '/favicon.png', // /public path
-  },
-}
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
