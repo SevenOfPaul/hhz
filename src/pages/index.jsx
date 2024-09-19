@@ -31,6 +31,7 @@ export default function Home() {
    useEffect(async ()=>{
     const games=await axios.get("/");
     setData({loading:false,games});
+    // return ()=>{}
    },[])
   return (
     <div className={styles.page}>

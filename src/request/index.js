@@ -1,12 +1,12 @@
 
 import axios from "axios";
 import {  Modal } from 'antd';
-const info = () => {
+const info = (message) => {
     Modal.info({
       title: 'This is a notification message',
       content: (
         <div>
-          <p>数据获取失败请联系管理员</p>
+            {message?message:<p>数据获取失败请联系管理员</p>}
         </div>
       ),
       onOk() {},
@@ -20,9 +20,9 @@ axios.defaults.baseURL="https://api.blik.wang/"
 axios.interceptors.response.use((response)=>{
     console.log(response)
    if(response.status=="200"){
-     return response.data;
+     return response.data.body;
    }else{
-    info();
+    info(response.data.body.message);
    }
 });
 export default axios;

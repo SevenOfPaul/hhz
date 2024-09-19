@@ -18,6 +18,7 @@ export default function Header(props) {
     <div className={styles.header}>
     <h1>{props.title}</h1>
     <div className={styles.content}>
+    {props.children}  
     <Button type="primary" onClick={()=>info("关注博主",<img src={img.src}   width={300}
       height={300} />)}>关注博主</Button>
       <Button type="primary" onClick={()=>info("加入我们","q群：221666602")}>加入我们</Button>
