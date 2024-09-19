@@ -29,7 +29,7 @@ export default function Home() {
   ];
   let [data,setData]=useState({loading:true,games:[]});
    useEffect(async ()=>{
-    const games=await axios.get("/");
+    const games=(await axios.get("/")).games;
     setData({loading:false,games});
     // return ()=>{}
    },[])

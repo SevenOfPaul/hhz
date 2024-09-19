@@ -18,7 +18,6 @@ const info = (message) => {
   };
 axios.defaults.baseURL="https://api.blik.wang/"
 axios.interceptors.response.use((response)=>{
-    console.log(response)
    if(response.status=="200"){
      return response.data.body;
    }else{
