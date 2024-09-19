@@ -1,5 +1,5 @@
 import styles from "./page.module.css";
-import { Table } from "antd"
+import { Table,Skeleton } from "antd"
 import Header from "@/components/Header";
 import process from "process"
 import axios from "../request/index";
@@ -36,7 +36,9 @@ export default function Home(props) {
     
     <div className={styles.page}>
        <Header title={"游戏合集"}/>
-     {data.loading?"":<Table columns={columns}  dataSource={data.games} pagination={{ pageSize: 30 }} scroll={{ y: 400 }} />}
+     {data.loading?  
+     <Skeleton  paragraph={{ rows: 8 }} />
+     :<Table columns={columns}  dataSource={data.games} pagination={{ pageSize: 30 }} scroll={{ y: 400 }} />}
     </div>
   );
 }
