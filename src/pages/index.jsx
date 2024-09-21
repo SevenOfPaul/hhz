@@ -14,7 +14,7 @@ export default function Home() {
     },
     {
       title: '安卓链接',
-      dataIndex: 'andriod',
+      dataIndex: 'android',
       width: 300,
     },
     {
