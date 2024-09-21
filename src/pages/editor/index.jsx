@@ -6,7 +6,7 @@ import axios from "../../request/index";
 import { useEffect, useState } from "react";
 import ico from "../../public/favicon.ico"
 // import {RowEditorTable , nanoid} from "@ant-design/pro-components/lib"
-import { Input,Button,Skeleton } from 'antd';
+import { Input,Button,Skeleton,Form } from 'antd';
 export default function Edit() {
   const columns = [
     {
