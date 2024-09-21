@@ -5,7 +5,7 @@ import Header from "@/components/Header";
 import axios from "../../request/index";
 import { useEffect, useState } from "react";
 import ico from "../../public/favicon.ico"
-import {RowEditorTable , nanoid} from "@ant-design/pro-components/lib"
+// import {RowEditorTable , nanoid} from "@ant-design/pro-components/lib"
 import { Input,Button,Skeleton } from 'antd';
 export default function Edit() {
   const columns = [
@@ -80,7 +80,7 @@ function submit(){
       <Button type="primary" onClick={submit}>提交</Button>
       <Input.Password placeholder="请输入密钥" className={styles.secret} defaultValue={secret}  onChange={changeSecret}/>
       </Header>
-      <div className={styles.edit}>
+      {/* <div className={styles.edit}>
     {data.loading?  
      <Skeleton  paragraph={{ rows: 8 }} />
      : <RowEditorTable 
@@ -102,7 +102,7 @@ function submit(){
        }),
      }}
    />}
-    </div>
+    </div> */}
     </div>
   );
 }
