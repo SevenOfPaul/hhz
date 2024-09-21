@@ -1,69 +1,200 @@
 [
   {
+    name: "【ARPG】惩戒魅魔She Will Punish Them v0.8【官方中文版】更新【10G】",
+    android: "",
+    pc: "https://pan.baidu.com/s/1U0Knb2DQ7mn-1BirWqWNpA?pwd=8888",
+    info: "",
+    desc: "",
+  },
+  {
+    name: "日系解密RPG】艾薇会社大冒险Company-【STEAM官方中文步兵版】+详细攻略新作【500M】",
+    android: "",
+    pc: "https://xz4.ymlhh.com/wp-content/uploads/xiazai/80038/80038.exe",
+    info: "",
+    desc: "",
+  },
+  {
+    name: "【国产良心SLG】【电脑+安卓版中文游戏】母上攻略 完整中文版+小说+全CG【全动态/4G】",
+    android: "安卓版本可以进群学习自己打包",
+    pc: "https://pan.baidu.com/s/1ByIgdGQBEODAirQchkJfnQ?pwd=rbqh",
+    info: "解压码：yiyezhiqiu",
+    desc: "",
+  },
+  {
+    name: "【大型3D/中文/魔改】[非游戏] 死或生：沙滩排球！维纳斯假期 全エロMOD邪恶魔改版【步兵/7G】",
+    android: "",
+    pc: "https://xz1.ymlhh.com/wp-content/uploads/xiazai/14308/14308%E7%94%B5%E8%84%91%E8%A7%A3%E5%8E%8B.exe",
+    info: "",
+    desc: "",
+  },
+  {
+    name: "福利游戏_美少女万華鏡1+2+2.5+3+4_全系列汉化版_全CG图",
+    android: "",
+    pc: "https://pan.baidu.com/s/1AlWNv1tTJsLScYPyijhzzw",
+    info: "【电脑版】网盘提取码：8888",
+    desc: "",
+  },
+  {
+    name: "【日系SLG】【电脑版汉化游戏】魔界女仆~恶魔天使和勇者的咖啡店 V1.5 官方中文版【全动态/2.5G】",
+    android: "",
+    pc: "http://pan.baidu.com/s/1U_CzwoCif2eaDbSRriGTaQ",
+    info: "",
+    desc: "",
+  },
+  {
+    name: "【3D同人动画/全动态】[究极白丝]三国同人：貂蝉无惨~絕世の舞姬！完整版【新作/步兵/4G】 ",
+    android: "",
+    pc: "https://xz1.ymlhh.com/wp-content/uploads/xiazai/10967/10967.rar",
+    info: "迅雷链接",
+    desc: "",
+  },
+  {
+    name: "超热门/国产之光】【电脑版中文游戏】鬼谷八荒绅士版 V0.8. 2011 加5种修改器+存档【4月更新/4.8G】",
+    android: "",
+    pc: "https://pan.baidu.com/s/11yZvG1b6dEJmlqgIAHhjAw?pwd=ke2f",
+    info: "解压密码KC资源",
+    desc: "https://mp.weixin.qq.com/s/zjar_UJ8N48lLrtMmlhDzA",
+  },
+  {
+    name: "永恒世界 Eternum 0.7 精翻汉化版 pc+安卓高清版",
+    android: "https://pan.xunlei.com/s/VNtdNDxaP6jODD_jTYUupIelA1?pwd=33he",
+    pc: "https://pan.xunlei.com/s/VNtdNDxaP6jODD_jTYUupIelA1?pwd=33he",
+    info: "双端版本 注意保存",
+    desc: "",
+  },
+  {
+    name: "夏日狂想曲 精翻汉化版 安卓高清版",
+    android: "",
+    pc: "https://pan.baidu.com/s/1nfJIpCcZtSL7X8cSVwBUmQ?pwd=r9k",
+    info: "解压密码：woaixiaocao;请将后缀改成rar再进行解压",
+    desc: "https://mp.weixin.qq.com/s/ndI1NwAv6EU6hp0hGQn5lw",
+  },
+  {
+    name: "韵母攻略",
+    android: "https://www.luegeng.com/api/txt_down.php?articleid=19914&articlename=%E9%9F%B5%E6%AF%8D%E6%94%BB%E7%95%A5",
+    pc: "https://www.luegeng.com/api/txt_down.php?articleid=19914&articlename=%E9%9F%B5%E6%AF%8D%E6%94%BB%E7%95%A5",
+    info: "注意这个不是游戏，是小说",
+    desc: "https://mp.weixin.qq.com/s/JwLSqkfTase1FuaMafSQ5A",
+  },
+  {
+    name: "【3D游戏/全动态】真三国无双8：绅士版3D同人作品全收集+1.31全DLC版+MOD【最终收藏版】",
+    android: "",
+    pc: "https://pan.baidu.com/s/1UGjrwjTZI6v2v2l1d4pWpA",
+    info: "358mod",
+    desc: "",
+  },
+  {
+    name: "仙帝重生都市",
+    android: "",
+    pc: "https://pan.baidu.com/s/1cSO_U8c5XGgGUAM788Asiw?pwd=uxp9",
+    info: "后缀改为rar后解压，解压码：woaixiaocao",
+    desc: "https://mp.weixin.qq.com/s/dodGc77qr_2Bqr9TAFEhqQ",
+  },
+  {
+    name: "冬日狂想曲",
+    android: "https://www.picxiaobai.com/az/2509.html",
+    pc: "https://pan.baidu.com/s/12Fl_7fSq5OmGKUsbstwQnA?pwd=75cf",
+    info: "格式改为7Z",
+    desc: "https://mp.weixin.qq.com/s/sA3btsW4py6HW82nt_SHEw",
+  }
+]
+[
+  {
     "name": "【ARPG】惩戒魅魔She Will Punish Them v0.8【官方中文版】更新【10G】",
     "android": "",
     "pc": "https://pan.baidu.com/s/1U0Knb2DQ7mn-1BirWqWNpA?pwd=8888",
-     "info": ""
+    "info": "",
+    "desc": "",
   },
   {
     "name": "日系解密RPG】艾薇会社大冒险Company-【STEAM官方中文步兵版】+详细攻略新作【500M】",
     "android": "",
     "pc": "https://xz4.ymlhh.com/wp-content/uploads/xiazai/80038/80038.exe",
-    "info": ""
+    "info": "",
+    "desc": "",
   },
   {
     "name": "【国产良心SLG】【电脑+安卓版中文游戏】母上攻略 完整中文版+小说+全CG【全动态/4G】",
     "android": "安卓版本可以进群学习自己打包",
     "pc": "https://pan.baidu.com/s/1ByIgdGQBEODAirQchkJfnQ?pwd=rbqh",
-    "info": "解压码：yiyezhiqiu"
+    "info": "解压码：yiyezhiqiu",
+    "desc": "",
   },
   {
     "name": "【大型3D/中文/魔改】[非游戏] 死或生：沙滩排球！维纳斯假期 全エロMOD邪恶魔改版【步兵/7G】",
     "android": "",
-    "pc": "ttps://xz1.ymlhh.com/wp-content/uploads/xiazai/14308/14308%E7%94%B5%E8%84%91%E8%A7%A3%E5%8E%8B.exe",
-    "info": ""
+    "pc": "https://xz1.ymlhh.com/wp-content/uploads/xiazai/14308/14308%E7%94%B5%E8%84%91%E8%A7%A3%E5%8E%8B.exe",
+    "info": "",
+    "desc": "",
   },
   {
     "name": "福利游戏_美少女万華鏡1+2+2.5+3+4_全系列汉化版_全CG图",
     "android": "",
     "pc": "https://pan.baidu.com/s/1AlWNv1tTJsLScYPyijhzzw",
-    "info": "【电脑版】网盘提取码：8888"
+    "info": "【电脑版】网盘提取码：8888",
+    "desc": "",
   },
   {
     "name": "【日系SLG】【电脑版汉化游戏】魔界女仆~恶魔天使和勇者的咖啡店 V1.5 官方中文版【全动态/2.5G】",
     "android": "",
     "pc": "http://pan.baidu.com/s/1U_CzwoCif2eaDbSRriGTaQ",
-    "info": ""
-  }, {
+    "info": "",
+    "desc": "",
+  },
+  {
     "name": "【3D同人动画/全动态】[究极白丝]三国同人：貂蝉无惨~絕世の舞姬！完整版【新作/步兵/4G】 ",
     "android": "",
     "pc": "https://xz1.ymlhh.com/wp-content/uploads/xiazai/10967/10967.rar",
-    "info": "迅雷链接"
+    "info": "迅雷链接",
+    "desc": "",
   },
   {
     "name": "超热门/国产之光】【电脑版中文游戏】鬼谷八荒绅士版 V0.8. 2011 加5种修改器+存档【4月更新/4.8G】",
     "android": "",
     "pc": "https://pan.baidu.com/s/11yZvG1b6dEJmlqgIAHhjAw?pwd=ke2f",
-    "info": "解压密码KC资源"
-  },  {
-    "name": "永恒世界 Eternum 0.7 精翻汉化版 PC+安卓高清版",
+    "info": "解压密码KC资源",
+    "desc": "https://mp.weixin.qq.com/s/zjar_UJ8N48lLrtMmlhDzA",
+  },
+  {
+    "name": "永恒世界 Eternum 0.7 精翻汉化版 pc+安卓高清版",
     "android": "https://pan.xunlei.com/s/VNtdNDxaP6jODD_jTYUupIelA1?pwd=33he",
     "pc": "https://pan.xunlei.com/s/VNtdNDxaP6jODD_jTYUupIelA1?pwd=33he",
-    "info": "双端版本 注意保存"
-  }, {
+    "info": "双端版本 注意保存",
+    "desc": "",
+  },
+  {
     "name": "夏日狂想曲 精翻汉化版 安卓高清版",
     "android": "",
     "pc": "https://pan.baidu.com/s/1nfJIpCcZtSL7X8cSVwBUmQ?pwd=r9k",
-    "info": "解压密码：woaixiaocao;请将后缀改成rar再进行解压"
-  }, {
+    "info": "解压密码：woaixiaocao;请将后缀改成rar再进行解压",
+    "desc": "https://mp.weixin.qq.com/s/ndI1NwAv6EU6hp0hGQn5lw",
+  },
+  {
     "name": "韵母攻略",
     "android": "https://www.luegeng.com/api/txt_down.php?articleid=19914&articlename=%E9%9F%B5%E6%AF%8D%E6%94%BB%E7%95%A5",
     "pc": "https://www.luegeng.com/api/txt_down.php?articleid=19914&articlename=%E9%9F%B5%E6%AF%8D%E6%94%BB%E7%95%A5",
-    "info": "注意这个不是游戏，是小说"
-  },{
+    "info": "注意这个不是游戏，是小说",
+    "desc": "https://mp.weixin.qq.com/s/JwLSqkfTase1FuaMafSQ5A",
+  },
+  {
     "name": "【3D游戏/全动态】真三国无双8：绅士版3D同人作品全收集+1.31全DLC版+MOD【最终收藏版】",
     "android": "",
     "pc": "https://pan.baidu.com/s/1UGjrwjTZI6v2v2l1d4pWpA",
-    "info": "358mod"
+    "info": "358mod",
+    "desc": "",
+  },
+  {
+    "name": "仙帝重生都市",
+    "android": "",
+    "pc": "https://pan.baidu.com/s/1cSO_U8c5XGgGUAM788Asiw?pwd=uxp9",
+    "info": "后缀改为rar后解压，解压码：woaixiaocao",
+    "desc": "https://mp.weixin.qq.com/s/dodGc77qr_2Bqr9TAFEhqQ",
+  },
+  {
+    "name": "冬日狂想曲",
+    "android": "https://www.picxiaobai.com/az/2509.html",
+    "pc": "https://pan.baidu.com/s/12Fl_7fSq5OmGKUsbstwQnA?pwd=75cf",
+    "info": "格式改为7Z",
+    "desc": "https://mp.weixin.qq.com/s/sA3btsW4py6HW82nt_SHEw",
   }
 ]

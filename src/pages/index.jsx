@@ -1,5 +1,6 @@
 import styles from "./page.module.css";
 import { Table,Skeleton,Input } from "antd"
+import Link from 'next/link'
 import Head from "next/head";
 import Header from "@/components/Header";
 import axios from "../request/index";
@@ -11,6 +12,9 @@ export default function Home() {
       title: '游戏名',
       dataIndex: 'name',
       width: 200,
+      render(text,record){
+       return <Link href={record.desc}>{text}</Link>
+      }
     },
     {
       title: '安卓链接',
