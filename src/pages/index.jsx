@@ -1,5 +1,5 @@
 import styles from "./page.module.css";
-import { Table,Skeleton } from "antd"
+import { Table,Skeleton,Input } from "antd"
 import Head from "next/head";
 import Header from "@/components/Header";
 import axios from "../request/index";
@@ -27,9 +27,15 @@ export default function Home() {
       width: 200,
     }
   ];
+  let [defaultGames,setDefaultGames]=useState([]);
+  function onSearch(cin){
+    console.log(defaultGames,defaultGames.filter(g=>g.name.indexOf(cin)!==-1))
+    setData({loading:false,games:defaultGames.filter(g=>g.name.indexOf(cin)!==-1)});
+  }
   let [data,setData]=useState({loading:true,games:[]});
    useEffect(async ()=>{
     const games=(await axios.get("/")).games;
+    setDefaultGames(games);
     setData({loading:false,games});
     // return ()=>{}
    },[])
@@ -40,7 +46,9 @@ export default function Home() {
         <meta property="og:title" content={data.games.map(g=>g.name).join(" ")} key={data.games.map(g=>g.name).join(" ")} />
         <link rel="icon" type="image/x-icon" href={ico.src}></link>
       </Head>
-       <Header title={"游戏合集"}/>
+       <Header title={"游戏合集"}>
+       <Input.Search placeholder="搜索" allowClear onSearch={onSearch} style={{ width: 200,maxHeight:40 }} />
+        </Header>
      {data.loading?  
      <Skeleton  paragraph={{ rows: 8 }} />
      :<Table columns={columns}  dataSource={data.games} pagination={{ pageSize: 30 }} scroll={{ y: 400 }} />}

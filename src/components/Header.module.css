@@ -7,6 +7,6 @@
     justify-content: flex-end;
     align-items: center;
   }
-  .content button{
+  .content .btn{
     margin :30px;
   }

@@ -80,29 +80,39 @@ function submit(){
       <Button type="primary" onClick={submit}>提交</Button>
       <Input.Password placeholder="请输入密钥" className={styles.secret} defaultValue={secret}  onChange={changeSecret}/>
       </Header>
-      {/* <div className={styles.edit}>
-    {data.loading?  
-     <Skeleton  paragraph={{ rows: 8 }} />
-     : <RowEditorTable 
-     columns={columns}
-     rowKey="id"
-     scroll={{
-       x: 960,
-     }}
-     value={games}
-     onChange={setDataSource}
-     recordCreatorProps={{
-       newRecordType: 'dataSource',
-       record: () => ({
-        id:nanoid(),
-          name:"",
-          andriod:"",
-          pc:"",
-          info:"请编辑游戏"
-       }),
-     }}
-   />}
-    </div> */}
+      <Form
+    name="basic"
+    labelCol={{ span: 8 }}
+    wrapperCol={{ span: 16 }}
+    style={{ maxWidth: 600 }}
+    initialValues={{ remember: true }}
+    onFinish={onFinish}
+    onFinishFailed={onFinishFailed}
+    autoComplete="off"
+  >
+    <Form.Item
+      label="Username"
+      name="username"
+      rules={[{ required: true, message: 'Please input your username!' }]}
+    >
+      <Input />
+    </Form.Item>
+
+    <Form.Item
+      label="Password"
+      name="password"
+      rules={[{ required: true, message: 'Please input your password!' }]}
+    >
+      <Input.Password />
+    </Form.Item>
+
+
+    <Form.Item wrapperCol={{ offset: 8, span: 16 }}>
+      <Button type="primary" htmlType="submit">
+        提交
+      </Button>
+    </Form.Item>
+  </Form>
     </div>
   );
 }
