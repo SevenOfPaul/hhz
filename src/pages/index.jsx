@@ -30,7 +30,7 @@ export default function Home() {
       dataIndex: 'pc',
       width: 200,
       render(text,record){ 
-        return <p onClick={()=>{if(text.indexOf("baidu")){Router.push({pathname: './download', query:{text} })}}} >{text}</p>
+        return <p onClick={()=>{if(text.indexOf("baidu")){Router.push({pathname: './download', query:text })}}} >{text}</p>
        }
     },{
       title: '备注',

@@ -1,12 +1,12 @@
 import React from 'react'
 import Head from "next/head";
 import { useSearchParams } from 'next/navigation'
-import { useEffect, useState } from "react";
+import { useEffect, useState,startTransition } from "react";
 import Header from "@/components/Header";
 import styles from "./download.module.css"
-import { Input,List,Form,Button  } from 'antd';
+import { Input,message,List,Form,Button  } from 'antd';
 import ico from "../../public/favicon.ico"
-// import parseQuery from './parseQuery';
+import parseQuery from './parseQuery';
 import init from "./init"
 export default function index() {
   const searchParams = useSearchParams()
@@ -16,16 +16,14 @@ export default function index() {
 
 
   useEffect(()=>{
-    if(url){
-      init();
-    }
+   init();
   try{
     (async()=>{
-      // let parseResult=await parseQuery(url);
-      //  initValue.url=parseResult.url;
-      //  initValue.pwd=parseResult.pwd;
-      //  initValue.surl=parseResult.surl;
-      //  console.log(initValue)
+      let parseResult=await parseQuery(url);
+       initValue.url=parseResult.url;
+       initValue.pwd=parseResult.pwd;
+       initValue.surl=parseResult.surl;
+       console.log(initValue)
     })()
   }catch(e){
     
