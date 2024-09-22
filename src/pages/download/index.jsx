@@ -1,12 +1,12 @@
 import React from 'react'
 import Head from "next/head";
 import { useSearchParams } from 'next/navigation'
-import { useEffect, useState,startTransition } from "react";
+import { useEffect, useState } from "react";
 import Header from "@/components/Header";
 import styles from "./download.module.css"
 import { Input,List,Form,Button  } from 'antd';
 import ico from "../../public/favicon.ico"
-import parseQuery from './parseQuery';
+// import parseQuery from './parseQuery';
 import init from "./init"
 export default function index() {
   const searchParams = useSearchParams()
