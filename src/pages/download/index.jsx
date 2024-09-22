@@ -21,11 +21,11 @@ export default function index() {
     }
   try{
     (async()=>{
-      let parseResult=await parseQuery(url);
-       initValue.url=parseResult.url;
-       initValue.pwd=parseResult.pwd;
-       initValue.surl=parseResult.surl;
-       console.log(initValue)
+      // let parseResult=await parseQuery(url);
+      //  initValue.url=parseResult.url;
+      //  initValue.pwd=parseResult.pwd;
+      //  initValue.surl=parseResult.surl;
+      //  console.log(initValue)
     })()
   }catch(e){
     
