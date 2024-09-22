@@ -3,6 +3,7 @@ import { Table,Skeleton,Input } from "antd"
 import Link from 'next/link'
 import Head from "next/head";
 import Header from "@/components/Header";
+import Router from "next/router"
 import axios from "../request/index";
 import { useEffect, useState } from "react";
 import ico from "../public/favicon.ico"
@@ -20,11 +21,17 @@ export default function Home() {
       title: '安卓链接',
       dataIndex: 'android',
       width: 300,
+      render(text,record){
+        return <Link href={record.desc}>{text}</Link>
+       }
     },
     {
       title: 'pc下载链接',
       dataIndex: 'pc',
       width: 200,
+      render(text,record){ 
+        return <p onClick={()=>{if(text.indexOf("baidu")){Router.push({pathname: './download', query:text })}}} >{text}</p>
+       }
     },{
       title: '备注',
       dataIndex: 'info',
