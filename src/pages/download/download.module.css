@@ -1,3 +1,16 @@
-.download{
-
-}
+@media (min-width: 1080px) {
+    .download{
+      width:70%;
+      margin: 0 auto;
+      padding-top:3%;
+    }  
+  }
+  @media (max-width: 1079px) {
+    .download{
+      width:90%;
+      margin: 0 auto;
+      padding-top:3%;
+    }  
+  }
+  
+  
