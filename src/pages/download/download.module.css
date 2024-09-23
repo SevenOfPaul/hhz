@@ -1,16 +1,23 @@
 @media (min-width: 1080px) {
-    .download{
-      width:70%;
-      margin: 0 auto;
-      padding-top:3%;
-    }  
-  }
-  @media (max-width: 1079px) {
-    .download{
-      width:90%;
-      margin: 0 auto;
-      padding-top:3%;
-    }  
-  }
-  
-  
+  .download{
+    width:70%;
+    margin: 0 auto;
+    padding-top:3%;
+  }  
+}
+@media (max-width: 1079px) {
+  .download{
+    width:90%;
+    margin: 0 auto;
+    padding-top:3%;
+  }  
+}
+.iframe{
+  width: 100%;
+  height:500px;
+  overflow: hidden;
+}
+.el-alert__title{
+  height: 0 !important;
+}
+
