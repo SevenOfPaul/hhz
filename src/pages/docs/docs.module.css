@@ -1,0 +1,17 @@
+@media (min-width: 1080px) {
+    .docs{
+      width:70%;
+      margin: 0 auto;
+      padding-top:3%;
+    }  
+  }
+  @media (max-width: 1079px) {
+    .docs{
+      width:90%;
+      margin: 0 auto;
+      padding-top:3%;
+    }  
+  }
+  .content img{
+    width:70%
+  }
