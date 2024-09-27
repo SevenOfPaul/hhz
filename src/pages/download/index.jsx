@@ -19,7 +19,7 @@ export default function index() {
       <Link style={{padding:'3px'}} href="https://wwqg.lanzoub.com/i7wOX2al8jef">软件下载地址 密码为6u3d</Link>
       </Header>
     
-    <iframe className={styles.iframe} src={"https://pan88.fun66.cn/user"}></iframe>
+    <iframe className={styles.iframe} src={"https://pan.gt288.top"}></iframe>
     </div>
   )
 }
