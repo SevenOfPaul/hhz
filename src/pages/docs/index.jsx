@@ -7,7 +7,8 @@ import ico from "../../public/favicon.ico"
 import step2 from "../../public/step2.1.png"
 import step3 from "../../public/step3.1.png"
 import step4 from "../../public/step3.2.png"
-import step5 from "../../public/step4.png"
+import step5 from "../../public/step4.1.png"
+import step6 from "../../public/step4.2.png"
 export default function index() {
   return (
     <div className={styles.docs}>
@@ -30,8 +31,10 @@ export default function index() {
         <p>在百度网盘本盘分享链接拷到网页中分析出<b>“快速下载链接”</b></p>
         <img src={step3.src}/>
         <img src={step4.src}/>
-        <h3>步骤3在air2中新建下载 拷入<b>“快速下载链接”</b>享受快速下载</h3>
+        <h3>步骤3启动air2，控制台会自己弹出。<p style={{color:"red",fontWeight:20,fontSize:'24px'}}>一定要启动air2.exe</p></h3>
         <img src={step5.src}/>
+        <h3>步骤3在air2中新建下载 拷入<b>“快速下载链接”</b>享受快速下载</h3>
+        <img src={step6.src}/>
       </div>
     </div>
   )
