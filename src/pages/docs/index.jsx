@@ -19,7 +19,7 @@ export default function index() {
       <Header title={"加速下载"}>
       <p style={{padding:'3px'}}>我这就是个转发页面，欢迎大家直接联系原作者 </p>
       <Link style={{padding:'3px'}} href="../download">返回下载页</Link>
-      <Link style={{padding:'3px'}} href="https://wwqg.lanzoub.com/i7wOX2al8jef">ari2软件下载地址 密码为6u3d</Link>
+      <Link style={{padding:'3px'}} href="https://wwqg.lanzoub.com/i7wOX2al8jef">ari2软件下载地址 密码为63ud</Link>
       </Header>
       <div className={styles.content}>
         <h2>步骤1 安装下载器这里使用air2进行下载，idm其实也可以但是我比较讨厌idm的捆绑</h2>
