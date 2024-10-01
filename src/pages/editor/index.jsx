@@ -6,19 +6,18 @@ import axios from "../../request/index";
 import { useEffect, useState } from "react";
 import ico from "../../public/favicon.ico"
 import { Gamepad } from "@/hooks/Adapter";
-import { Input,Button,Skeleton,Form } from 'antd';
+import { Input,Button,Form } from 'antd';
 export default function Edit() {
 
 async function submit(data){
-  axios.post("/addGame",{data:{game:Gamepad(data)}});
+  axios.post("/test",{game:Gamepad(data)});
 }
   return (
     <div className={styles.page}>
             <Head>
-      <title>{"游戏合集，你喜欢的游戏都在这里"}</title>
+      <title>{"编辑游戏"}</title>
         <link rel="icon" type="image/x-icon" href={ico.src}></link>
       </Head>
-     
       <Header title={"编辑游戏"}>
       </Header>
       <Form

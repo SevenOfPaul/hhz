@@ -1,5 +1,4 @@
 //----------------------Games--------------------
-import raw from "./games.json" assert  {type:"json"}
 async function getGames(request, env, ctx){
     const games=JSON.parse(await env.hhz.get("games"))
     let body={code:200,body:{games}}
@@ -68,6 +67,12 @@ async function getGames(request, env, ctx){
     response.headers.set('Access-Control-Allow-Methods','GET, POST');
     return response
   }
+ async function test(request, env, ctx){
+    let response=new Response(await request.text());
+    response.headers.set("Access-Control-Allow-Origin", "*");
+    response.headers.set('Access-Control-Allow-Methods','GET, POST');
+    return response
+  }
   export default {
     async scheduled(event, env, ctx) {
       await env.hhz.put("games_backup",await env.hhz.get("games"));
@@ -86,6 +91,9 @@ async function getGames(request, env, ctx){
         }
         if(request.url.indexOf("addGame")!==-1){
           return postGame(request, env, ctx);
+        }
+        if(request.url.indexOf("test")!==-1){
+          return test(request, env, ctx);
         }
           return postGames(request,env,ctx);
   
