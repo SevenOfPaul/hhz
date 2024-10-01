@@ -7,10 +7,12 @@ import { useEffect, useState } from "react";
 import ico from "../../public/favicon.ico"
 import { Gamepad } from "@/hooks/Adapter";
 import { Input,Button,Form } from 'antd';
+import { message } from "antd";
 export default function Edit() {
 
 async function submit(data){
-  axios.post("/test",{game:Gamepad(data)});
+const res=await axios.post("/addGame",{game:JSON.stringify(Gamepad(data))});
+  message.info(res.message);
 }
   return (
     <div className={styles.page}>

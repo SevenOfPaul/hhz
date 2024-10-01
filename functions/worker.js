@@ -3,11 +3,14 @@ async function getGames(request, env, ctx){
     const games=JSON.parse(await env.hhz.get("games"))
     let body={code:200,body:{games}}
     let response=new Response(JSON.stringify(body));
-    response.headers.set("Access-Control-Allow-Origin", "*");
-    response.headers.set('Access-Control-Allow-Methods','GET, POST');
     return response
   }
-  
+  async function addGame(request, env, ctx){
+    const games=JSON.parse(await env.hhz.get("games"))
+    let body={code:200,body:{games}}
+    let response=new Response(JSON.stringify(body));
+    return response
+  }
   async function postGames(request, env, ctx){
     let reqBody=await request.json();
     console.log(reqBody);
@@ -20,8 +23,6 @@ async function getGames(request, env, ctx){
       }
      }
      const response=new Response(JSON.stringify(body));
-     response.headers.set("Access-Control-Allow-Origin", "*");
-     response.headers.set('Access-Control-Allow-Methods','GET, POST');
      return response;
   }
   async function postGame(request, env, ctx){
@@ -39,8 +40,6 @@ async function getGames(request, env, ctx){
       }
      }
      const response=new Response(JSON.stringify(body));
-     response.headers.set("Access-Control-Allow-Origin", "*");
-     response.headers.set('Access-Control-Allow-Methods','GET, POST');
      return response;
   }
   //---------------code-----------------
@@ -48,8 +47,6 @@ async function getGames(request, env, ctx){
     const code=JSON.parse(await env.hhz.get("code"));
     let body={code:200,body:{code}}
     let response=new Response(JSON.stringify(body));
-    response.headers.set("Access-Control-Allow-Origin", "*");
-    response.headers.set('Access-Control-Allow-Methods','GET, POST');
     return response
   }
   async function postCode(request, env, ctx){
@@ -63,14 +60,10 @@ async function getGames(request, env, ctx){
       }
      }
     let response=new Response(JSON.stringify(body));
-    response.headers.set("Access-Control-Allow-Origin", "*");
-    response.headers.set('Access-Control-Allow-Methods','GET, POST');
     return response
   }
  async function test(request, env, ctx){
     let response=new Response(await request.text());
-    response.headers.set("Access-Control-Allow-Origin", "*");
-    response.headers.set('Access-Control-Allow-Methods','GET, POST');
     return response
   }
   export default {
@@ -81,6 +74,9 @@ async function getGames(request, env, ctx){
     async fetch(request, env, ctx) {
       if(request.method=='GET'){
         //请求
+        if(request.url.indexOf("addGame")!==-1){
+          return addGame(request, env, ctx);
+        }
       if(request.url.indexOf("code")!==-1){
         return getCode(request, env, ctx);
       }
@@ -96,7 +92,8 @@ async function getGames(request, env, ctx){
           return test(request, env, ctx);
         }
           return postGames(request,env,ctx);
-  
+      }else if(request.method=='OPTIONS'){
+       return Response("*");
       }
     },
   };
