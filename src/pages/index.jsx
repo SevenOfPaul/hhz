@@ -14,6 +14,7 @@ export default function Home() {
       title: '序号',
       dataIndex: 'idx',
       width: 100,
+      align:"center",
       render(text,record,idx){
        return <p>{idx+1}</p>
       }
@@ -22,6 +23,7 @@ export default function Home() {
       title: '游戏名',
       dataIndex: 'name',
       width: 200,
+      align:"center",
       render(text,record){
        return <Link href={record.desc}>{text}</Link>
       }
@@ -30,14 +32,17 @@ export default function Home() {
       title: '安卓链接',
       dataIndex: 'android',
       width: 300,
+        align:"center",
     },
     {
       title: 'pc下载链接',
       dataIndex: 'pc',
+        align:"center",
       width: 200,
     },{
       title: '备注',
       dataIndex: 'info',
+        align:"center",
       width: 200,
     }
   ];
