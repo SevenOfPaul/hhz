@@ -1,21 +1,9 @@
 import raw from "./games.json" assert  {type:"json"}
+import { nanoid } from "nanoid";
+import fs from "fs/promises"
 async function postGames(){
-  const myHeaders = new Headers();
-  myHeaders.append("User-Agent", "Apifox/1.0.0 (https://apifox.com)");
-  myHeaders.append("Content-Type", "application/json");
-  myHeaders.append("Accept", "*/*");
-  myHeaders.append("Host", "api.blik.wang");
-  myHeaders.append("Connection", "keep-alive");
-  const requestOptions = {
-    method: 'POST',
-    headers: myHeaders,
-    body: raw,
-    redirect: 'follow'
- };
- 
- fetch("https://api.blik.wang/", requestOptions)
-    .then(response => response.text())
-    .then(result => console.log(result))
-    .catch(error => console.log('error', error));
+raw.games=raw.games.map(r=>{r.id=nanoid();return r});
+await fs.appendFile("./games_id.json",JSON.stringify(raw));
+
 }
 export default postGames;
