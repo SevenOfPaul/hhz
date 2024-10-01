@@ -9,6 +9,7 @@ import step3 from "../../public/step3.1.png"
 import step4 from "../../public/step3.2.png"
 import step5 from "../../public/step4.1.png"
 import step6 from "../../public/step4.2.png"
+
 export default function index() {
   return (
     <div className={styles.docs}>

@@ -7,8 +7,17 @@ import Router from "next/router"
 import axios from "../request/index";
 import { useEffect, useState } from "react";
 import ico from "../public/favicon.ico"
+import { code1HasCode2 } from '@/hooks/searchHook'
 export default function Home() {
   const columns = [
+    {
+      title: '序号',
+      dataIndex: 'idx',
+      width: 100,
+      render(text,record,idx){
+       return <p>{idx+1}</p>
+      }
+    },
     {
       title: '游戏名',
       dataIndex: 'name',
@@ -34,8 +43,8 @@ export default function Home() {
   ];
   let [defaultGames,setDefaultGames]=useState([]);
   function onSearch(cin){
-    console.log(defaultGames,defaultGames.filter(g=>g.name.indexOf(cin)!==-1))
-    setData({loading:false,games:defaultGames.filter(g=>g.name.indexOf(cin)!==-1)});
+    console.log(defaultGames,defaultGames.filter(g=>g.name.indexOf(cin)))
+    setData({loading:false,games:defaultGames.filter(g=>code1HasCode2(g.name,cin))});
   }
   let [data,setData]=useState({loading:true,games:[]});
    useEffect(async ()=>{
