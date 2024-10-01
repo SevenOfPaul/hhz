@@ -11,7 +11,7 @@ import { message } from "antd";
 export default function Edit() {
 
 async function submit(data){
-const res=await axios.post("/addGame",{game:JSON.stringify(Gamepad(data))});
+const res=await axios.post("/addGame",JSON.stringify({game:Gamepad(data)}));
   message.info(res.message);
 }
   return (
