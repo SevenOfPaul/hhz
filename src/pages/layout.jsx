@@ -1,4 +1,5 @@
 import localFont from "next/font/local";
+import Head from "next/head";
 // import "./globals.css";
 import { AntdRegistry } from '@ant-design/nextjs-registry';
 const geistSans = localFont({
@@ -16,6 +17,9 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body className={`${geistSans.variable} ${geistMono.variable}`}>
+        <Head>
+      <meta name="google-adsense-account" content="ca-pub-6085331651697044"/>
+      </Head>
       <AntdRegistry>{children}</AntdRegistry>
       </body>
     </html>

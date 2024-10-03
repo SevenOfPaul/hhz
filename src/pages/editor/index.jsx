@@ -13,6 +13,7 @@ export default function Edit() {
 async function submit(data){
 const res=await axios.post("/addGame",JSON.stringify({game:Gamepad(data)}));
   message.info(res.message);
+  
 }
   return (
     <div className={styles.page}>
