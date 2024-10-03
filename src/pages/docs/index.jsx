@@ -1,9 +1,8 @@
 import React from 'react'
-import Head from "next/head"
 import Link from 'next/link'
 import Header from '@/components/Header'
 import styles from "./docs.module.css"
-import ico from "../../public/favicon.ico"
+import Meta from "../../components/Meta"
 import step2 from "../../public/step2.1.png"
 import step3 from "../../public/step3.1.png"
 import step4 from "../../public/step3.2.png"
@@ -13,13 +12,7 @@ import step6 from "../../public/step4.2.png"
 export default function index() {
   return (
     <div className={styles.docs}>
-            <Head>
-      <title>{"下载页，你喜欢的游戏都在这里"}</title>
-      <meta name="google-adsense-account" content="ca-pub-6085331651697044"/>
-        <link rel="icon" type="image/x-icon" href={ico.src}></link>
-        <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6085331651697044"
-     crossorigin="anonymous"></script>
-      </Head>
+      <Meta title={"下载页，你喜欢的游戏都在这里"} />
       <Header title={"加速下载"}>
       <p style={{padding:'3px'}}>我这就是个转发页面，欢迎大家直接联系原作者 </p>
       <Link style={{padding:'3px'}} href="../download">返回下载页</Link>

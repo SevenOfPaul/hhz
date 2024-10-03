@@ -1,12 +1,10 @@
 import styles from "./page.module.css";
 import { Table,Skeleton,Input } from "antd"
 import Link from 'next/link'
-import Head from "next/head";
 import Header from "@/components/Header";
-import Router from "next/router"
 import axios from "../request/index";
 import { useEffect, useState } from "react";
-import ico from "../public/favicon.ico"
+import Meta from "@/components/Meta";
 import { code1HasCode2 } from '@/hooks/searchHook'
 export default function Home() {
   const columns = [
@@ -60,14 +58,8 @@ export default function Home() {
    },[])
   return (
     <div className={styles.page}>
-      <Head>
-      <title>{"游戏合集，你喜欢的游戏都在这里"}</title>
-        <meta property="og:title" content={data.games.map(g=>g.name).join(" ")} key={data.games.map(g=>g.name).join(" ")} />
-        <meta name="google-adsense-account" content="ca-pub-6085331651697044"/>
-        <link rel="icon" type="image/x-icon" href={ico.src}></link>
-        <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6085331651697044"
-     crossorigin="anonymous"></script>
-      </Head>
+   <Meta title={"游戏合集，你喜欢的游戏都在这里"}>
+     <meta property="og:title" content={data.games.map(g=>g.name).join(" ")} key={data.games.map(g=>g.name).join(" ")} /></Meta>
        <Header title={"游戏合集"}>
        <Input.Search placeholder="搜索" allowClear onSearch={onSearch} style={{ width: 200,maxHeight:40 }} />
         </Header>

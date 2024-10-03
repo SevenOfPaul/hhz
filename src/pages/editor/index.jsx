@@ -1,10 +1,8 @@
 import styles from "./editor.module.css";
-// import { Button} from "antd"
 import Head from "next/head";
 import Header from "@/components/Header";
 import axios from "../../request/index";
-import { useEffect, useState } from "react";
-import ico from "../../public/favicon.ico"
+import Meta from "@/components/Meta";
 import { Gamepad } from "@/hooks/Adapter";
 import { Input,Button,Form } from 'antd';
 import { message } from "antd";
@@ -17,11 +15,7 @@ const res=await axios.post("/addGame",JSON.stringify({game:Gamepad(data)}));
 }
   return (
     <div className={styles.page}>
-            <Head>
-      <title>{"编辑游戏"}</title>
-        <link rel="icon" type="image/x-icon" href={ico.src}></link>
-        <meta name="google-adsense-account" content="ca-pub-6085331651697044"/>
-      </Head>
+     <Meta title={"编辑游戏"}/>
       <Header title={"编辑游戏"}>
       </Header>
       <Form
