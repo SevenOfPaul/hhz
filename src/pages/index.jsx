@@ -63,6 +63,7 @@ export default function Home() {
       <Head>
       <title>{"游戏合集，你喜欢的游戏都在这里"}</title>
         <meta property="og:title" content={data.games.map(g=>g.name).join(" ")} key={data.games.map(g=>g.name).join(" ")} />
+        <meta name="google-adsense-account" content="ca-pub-6085331651697044"/>
         <link rel="icon" type="image/x-icon" href={ico.src}></link>
       </Head>
        <Header title={"游戏合集"}>

@@ -20,6 +20,7 @@ const res=await axios.post("/addGame",JSON.stringify({game:Gamepad(data)}));
             <Head>
       <title>{"编辑游戏"}</title>
         <link rel="icon" type="image/x-icon" href={ico.src}></link>
+        <meta name="google-adsense-account" content="ca-pub-6085331651697044"/>
       </Head>
       <Header title={"编辑游戏"}>
       </Header>

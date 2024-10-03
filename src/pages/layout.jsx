@@ -17,9 +17,6 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body className={`${geistSans.variable} ${geistMono.variable}`}>
-        <Head>
-      <meta name="google-adsense-account" content="ca-pub-6085331651697044"/>
-      </Head>
       <AntdRegistry>{children}</AntdRegistry>
       </body>
     </html>
