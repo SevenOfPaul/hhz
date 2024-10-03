@@ -3,7 +3,7 @@ import Head from "next/head";
 import ico from "../public/favicon.ico"
 export default function Meta(props) {
   return (
-    <>       <Head>
+    <>  <Head>
     <title>{props.title}</title>
     {props.children}
     <meta name="google-adsense-account" content="ca-pub-6085331651697044"/>
