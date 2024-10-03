@@ -16,8 +16,6 @@ const geistMono = localFont({
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-            <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6085331651697044"
-     crossorigin="anonymous"></script>
       <body className={`${geistSans.variable} ${geistMono.variable}`}>
 
       <AntdRegistry>{children}</AntdRegistry>
