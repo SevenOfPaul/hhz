@@ -1,16 +1,15 @@
 import React from 'react'
 import Link from 'next/link';
 import Head from "next/head";
-import { useSearchParams } from 'next/navigation'
-import { useEffect, useState,startTransition } from "react";
 import Header from "@/components/Header";
 import styles from "./download.module.css"
 import ico from "../../public/favicon.ico"
 export default function index() {
   return (
     <div className={styles.download}>
-                    <Head>
+       <Head>
       <title>{"下载页，你喜欢的游戏都在这里"}</title>
+      <meta name="google-adsense-account" content="ca-pub-6085331651697044"/>
         <link rel="icon" type="image/x-icon" href={ico.src}></link>
       </Head>
       <Header title={"加速下载"}>
