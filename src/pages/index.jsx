@@ -44,14 +44,19 @@ export default function Home() {
       width: 200,
     }
   ];
+  const [page,setPage]=useState(1);
   let [defaultGames,setDefaultGames]=useState([]);
   function onSearch(cin){
-    console.log(defaultGames,defaultGames.filter(g=>g.name.indexOf(cin)))
     setData({loading:false,games:defaultGames.filter(g=>code1HasCode2(g.name,cin))});
   }
   let [data,setData]=useState({loading:true,games:[]});
+ async function changePage(page){
+  setPage(page+1);
+  return (await axios.get("/game",{params:{page:page}})).games;
+  }
    useEffect(async ()=>{
-    const games=(await axios.get("/game")).games;
+    const games=await changePage(1);
+    console.log(games);
     setDefaultGames(games);
     setData({loading:false,games});
     // return ()=>{}
@@ -68,7 +73,8 @@ export default function Home() {
         </Header>
      {data.loading?  
      <Skeleton  paragraph={{ rows: 8 }} />
-     :<Table columns={columns}  dataSource={data.games} key={"id"} pagination={{ pageSize: 30 }} scroll={{ y: 400 }} />}
+     :<Table columns={columns}  dataSource={data.games} key={"id"} pagination={{ pageSize: 30,
+      current:page-1,onChange:changePage }} scroll={{ y: 400 }} />}
     </div>
   );
 }

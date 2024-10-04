@@ -11,6 +11,9 @@ export default function Edit() {
 async function submit(data){
 const res=await axios.post("/addGame",JSON.stringify({game:Gamepad(data)}));
   message.info(res.message);
+  for(let key in data){
+    data[key]="";
+  }
   
 }
   return (
