@@ -52,11 +52,12 @@ export default function Home() {
   let [data,setData]=useState({loading:true,games:[]});
  async function changePage(page){
   setPage(page+1);
-  return (await axios.get("/game",{params:{page:page}})).games;
+  setData({loading:true,games:[...data.games]});
+  const games= (await axios.get("/game",{params:{page:page}})).games;
+  setData({loading:false,games:[...data.games,...games]});
   }
    useEffect(async ()=>{
-    const games=await changePage(1);
-    console.log(games);
+    const games=(await axios.get("/game",{params:{page:page}})).games;
     setDefaultGames(games);
     setData({loading:false,games});
     // return ()=>{}
