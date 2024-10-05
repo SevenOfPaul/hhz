@@ -61,7 +61,7 @@ export default function Home() {
   }
   }
    useEffect(async ()=>{
-    const games=(await axios.get("/game",{params:{page:page}})).games;
+    const games=(await axios.get("/game",{params:{page:1}})).games;
     setDefaultGames(games);
     setData({loading:false,games});
     // return ()=>{}
