@@ -13,7 +13,6 @@ async function getGames(request, env, ctx){
   }
   async function postGames(request, env, ctx){
     let reqBody=await request.json();
-    console.log(reqBody);
     let body={};
         await env.hhz.put("games",JSON.stringify(reqBody.games));
       body={
