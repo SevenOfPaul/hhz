@@ -50,16 +50,16 @@ export default function Home() {
     setData({loading:false,games:defaultGames.filter(g=>code1HasCode2(g.name,cin))});
   }
   let [data,setData]=useState({loading:true,games:[]});
- async function changePage(newPage){
-  if(newPage>page){
-  setPage(newPage+1);
-  setData({loading:true,games:[...data.games]});
-  const games= (await axios.get("/game",{params:{page:page}})).games;
-  setData({loading:false,games:[...data.games,...games]});
-  }else{
-    setPage(newPage-1);
-  }
-  }
+//  async function changePage(newPage){
+//   if(newPage>page){
+//   setPage(newPage+1);
+//   setData({loading:true,games:[...data.games]});
+//   const games= (await axios.get("/game",{params:{page:page}})).games;
+//   setData({loading:false,games:[...data.games,...games]});
+//   }else{
+//     setPage(newPage-1);
+//   }
+//   }
    useEffect(async ()=>{
     const games=(await axios.get("/game",{params:{page:page}})).games;
     setDefaultGames(games);
@@ -78,8 +78,7 @@ export default function Home() {
         </Header>
      {data.loading?  
      <Skeleton  paragraph={{ rows: 8 }} />
-     :<Table columns={columns}  dataSource={data.games} key={"id"} pagination={{ pageSize: 30,
-      current:page,onChange:changePage }} scroll={{ y: 400 }} />}
+     :<Table columns={columns}  dataSource={data.games} key={"id"} pagination={{ pageSize: 30}} scroll={{ y: 400 }} />}
     </div>
   );
 }
