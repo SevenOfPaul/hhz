@@ -7,7 +7,6 @@ import step2 from "../../public/step2.1.png"
 import step3 from "../../public/step3.1.png"
 import step4 from "../../public/step3.2.png"
 import step5 from "../../public/step4.1.png"
-import step6 from "../../public/step4.2.png"
 
 export default function index() {
   return (
@@ -19,19 +18,24 @@ export default function index() {
       <Link style={{padding:'3px'}} href="https://motrix.app">motrix软件下载地址</Link>
       </Header>
       <div className={styles.content}>
-        <h2>步骤1 安装下载器这里使用air2进行下载，idm其实也可以但是我比较讨厌idm的捆绑</h2>
-        <p>下载air2软件 安装完成进入步骤2如果不会可以参照这篇文章
-            <Link href="https://www.52pojie.cn/thread-1662232-1-1.html#:~:text=Aria2%E6%98%AF%E4%B8%80%E6%AC%BE%E5%BC%80%E6%BA%90">
-        [Windows] Aria2-AriaNg 1.24便携版【一键启动Aria2下载工具】  </Link></p>
-        <h2>步骤2 解析百度直链</h2>
+        <h2>步骤1 安装下载器这里使用motrix进行下载，idm其实也可以但是我比较讨厌idm的捆绑</h2>
+        <p>下载motrix软件 安装完成进入步骤2如果不会可以参照这篇文章
+            <Link href="https://zhuanlan.zhihu.com/p/359680960">
+            全能型下载神器 | Motrix  </Link></p>
+        <h2>步骤1 安装motrix</h2>
         <img src={step2.src}/>
         <p>在百度网盘本盘分享链接拷到网页中分析出<b>“快速下载链接”</b></p>
         <img src={step3.src}/>
+        <p>点击获取刷新列表等下面出现想要的文件后选择批量解析</p>
         <img src={step4.src}/>
-        <h3>步骤3启动air2，控制台会自己弹出。<p style={{color:"red",fontWeight:20,fontSize:'24px'}}>一定要启动air2.exe</p></h3>
+        <h3>步骤3启动motrix。<p style={{color:"red",fontWeight:20,fontSize:'24px'}}>注意第一次下载要在设置里设置下载位置和端口（端口设置为16800）</p></h3>
         <img src={step5.src}/>
-        <h3>步骤3在air2中新建下载 拷入<b>“快速下载链接”</b>享受快速下载</h3>
-        <img src={step6.src}/>
+        <h3>步骤4在motrix中新建下载 拷入<b>“快速下载链接”</b>享受快速下载</h3>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
       </div>
     </div>
   )
