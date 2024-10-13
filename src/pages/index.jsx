@@ -67,14 +67,12 @@ const showModal = () => {
   setIsModalOpen(true);
 };
 const [code,setCode]=useState("");
-const [trap,steup]=useState(false);
 function changeCode(e){
   setCode(e.target.value)
 }
 const handleOk = () => {
   if(code=="9999"){
     setIsModalOpen(false);
-    steup(true);
     localStorage.setItem("code",9999);
   }else{
     messageApi.open({
