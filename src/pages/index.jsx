@@ -67,14 +67,15 @@ const showModal = () => {
   setIsModalOpen(true);
 };
 const [code,setCode]=useState("");
+const [trap,steup]=useState(false);
 function changeCode(e){
   setCode(e.target.value)
 }
 const handleOk = () => {
   if(code=="9999"){
     setIsModalOpen(false);
+    steup(true);
     localStorage.setItem("code",9999);
-    return Promise.resolve("");
   }else{
     messageApi.open({
       type: 'warning',
@@ -85,12 +86,13 @@ const handleOk = () => {
    useEffect(async ()=>{
     if(localStorage.getItem("code")!='9999'){
        showModal();
-    }
+    }else{
     const games=(await axios.get("/game",{params:{page:page}})).games;
     setDefaultGames(games);
     setData({loading:false,games});
+    }
     // return ()=>{}
-   },[])
+   },[trap])
   return (
     <div className={styles.page}>
          {contextHolder}
