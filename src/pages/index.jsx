@@ -45,22 +45,12 @@ export default function Home() {
       width: 200,
     }
   ];
-  const [page,setPage]=useState(1);
+
   let [defaultGames,setDefaultGames]=useState([]);
   function onSearch(cin){
     setData({loading:false,games:defaultGames.filter(g=>code1HasCode2(g.name,cin))});
   }
   let [data,setData]=useState({loading:true,games:[]});
-//  async function changePage(newPage){
-//   if(newPage>page){
-//   setPage(newPage+1);
-//   setData({loading:true,games:[...data.games]});
-//   const games= (await axios.get("/game",{params:{page:page}})).games;
-//   setData({loading:false,games:[...data.games,...games]});
-//   }else{
-//     setPage(newPage-1);
-//   }
-//   }
 const [isModalOpen, setIsModalOpen] = useState(false);
 const [messageApi, contextHolder] = message.useMessage();
 const showModal = () => {
@@ -86,7 +76,7 @@ const handleOk = () => {
       if(localStorage.getItem("code")!='9999'){
          showModal();
       }
-      const games=(await axios.get("/game",{params:{page:page}})).games;
+      const games=(await axios.get("/game")).games;
       setDefaultGames(games);
       setData({loading:false,games});
       // return ()=>{}

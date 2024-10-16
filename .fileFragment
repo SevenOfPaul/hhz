@@ -1,0 +1,12 @@
+// 数据分页 从后端分页获取
+const [page,setPage]=useState(1);
+ async function changePage(newPage){
+  if(newPage>page){
+  setPage(newPage+1);
+  setData({loading:true,games:[...data.games]});
+  const games= (await axios.get("/game",{params:{page:page}})).games;
+  setData({loading:false,games:[...data.games,...games]});
+  }else{
+    setPage(newPage-1);
+  }
+  }
