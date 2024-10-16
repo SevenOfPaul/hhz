@@ -1,4 +1,4 @@
-import styles from "./page.module.css";
+import styles from "./page.module.scss";
 import { Table,Skeleton,Input,Modal,message } from "antd"
 import Link from 'next/link'
 import Header from "@/components/Header";
@@ -97,9 +97,11 @@ const handleOk = () => {
         {/* <Link style={{paddingRight:"10px"}} href="https://mp.weixin.qq.com/s?__biz=Mzg5OTYzNTQ1Mg==&mid=2247484105&idx=1&sn=e3ae778c7c3cc3be4179d5a964867c38&chksm=c051035af7268a4cc43bb252abc60eb33f391a83c3f6fa0e83e79b804c13357d96ebd4924b46&token=1379698303&lang=zh_CN#rd">
           网盘快速下载链接
         </Link> */}
-        <Link href="./gameDocs" style={{paddingRight:"10px"}}>前置教程</Link>
+       <div className={styles.head}>
+       <Link href="./gameDocs" style={{paddingRight:"10px"}}>前置教程</Link>
         <Link href="./download" style={{paddingRight:"10px"}}>加速下载</Link>
        <Input.Search placeholder="搜索" allowClear onSearch={onSearch} style={{ width: 200,maxHeight:40 }} />
+       </div>
         </Header>
      {data.loading?  
      <Skeleton  paragraph={{ rows: 8 }} />

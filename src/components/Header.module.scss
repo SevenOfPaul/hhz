@@ -6,7 +6,12 @@
     flex-direction: row;
     justify-content: flex-end;
     align-items: center;
-  }
-  .content .btn{
-    margin :2%;
+    flex-wrap: wrap;
+   div{
+    display: flex;
+    flex-direction: row;
+    .btn{
+      margin :2%;
+    }
+   }
   }
