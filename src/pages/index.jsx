@@ -61,9 +61,9 @@ function changeCode(e){
   setCode(e.target.value)
 }
 const handleOk = () => {
-  if(code=="9999"){
+  if(code=="1937"){
     setIsModalOpen(false);
-    localStorage.setItem("code",9999);
+    localStorage.setItem("code",1937);
   }else{
     messageApi.open({
       type: 'warning',
@@ -73,7 +73,7 @@ const handleOk = () => {
 };
    useEffect(()=>{
     (async()=>{
-      if(localStorage.getItem("code")!='9999'){
+      if(localStorage.getItem("code")!='1937'){
          showModal();
       }
       const games=(await axios.get("/game")).games;
