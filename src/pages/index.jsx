@@ -86,9 +86,9 @@ const handleOk = () => {
     <div className={styles.page}>
          {contextHolder}
       <Modal title="很抱歉" open={isModalOpen} okText={"提交"} onOk={handleOk} closable={false}cancelButtonProps={{ style:{display:"none"}}}>
-        <p>很抱歉打扰到您，但是因为公众号被举报，我们只能以这样的一种方式强制您关注公众号。您放心这是一种无奈之举，不会长时间如此。</p>
+        <p>由于接口存在被盗用现象，只好加入二维码来防止！</p>
         <img src={img.src} />
-        <p>请输入验证码，验证码在关注公众号后发送验证码或点击菜单皆可</p>
+        <p>请输入验证码，验证码在关注公众号后发送验证码或点击菜单皆可。</p>
         <Input placeholder="请输入验证码" onChange={(e)=>changeCode(e)}/>
       </Modal>
    <Meta title={"游戏合集，你喜欢的游戏都在这里"}>
@@ -98,6 +98,7 @@ const handleOk = () => {
           网盘快速下载链接
         </Link> */}
        <div className={styles.head}>
+        <p>手机端用户注意右侧依然有内容</p>
        <Link href="./gameDocs" style={{paddingRight:"10px"}}>前置教程</Link>
         <Link href="./download" style={{paddingRight:"10px"}}>加速下载</Link>
        <Input.Search placeholder="搜索" allowClear onSearch={onSearch} style={{ width: 200,maxHeight:40 }} />
