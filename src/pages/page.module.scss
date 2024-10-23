@@ -1,18 +1,30 @@
-@media (min-width: 1080px) {
-  .page{
-    width:70%;
+@media (max-width: 1080px) {
+  .page {
+    width: 70%;
     margin: 0 auto;
-    padding-top:3%;
-  }  
-}
-@media (max-width: 1079px) {
-  .page{
-    width:90%;
-    margin: 0 auto;
-    padding-top:3%;
-    .head{
-      margin: 5% 0;
+    padding-top: 3%;
+      .tip {
+        width: 100%;
+        text-align: left;
+        font-size: 16px;
+         margin: 1% 0;
+      .link {
+        font-size: 16px;
+      }
     }
-  }  
+  }
 }
-
+@media (min-width: 1079px) {
+  .page {
+    width: 90%;
+    margin: 0 auto;
+    padding-top: 3%;
+      .tip {
+        text-align: left;
+        font-size: 20px;
+      .link {
+        font-size: 20px;
+      }
+    }
+  }
+}

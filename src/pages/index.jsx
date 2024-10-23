@@ -91,22 +91,22 @@ const handleOk = () => {
         <p>请输入验证码，验证码在关注公众号后发送验证码或点击菜单皆可。</p>
         <Input placeholder="请输入验证码" onChange={(e)=>changeCode(e)}/>
       </Modal>
-   <Meta title={"游戏合集，你喜欢的游戏都在这里"}>
+     <Meta title={"游戏合集，你喜欢的游戏都在这里"}>
      <meta property="og:title" content={defaultGames.map(g=>g.name).join(" ")} key={defaultGames.map(g=>g.name).join(" ")} /></Meta>
        <Header title={"游戏合集"}>
         {/* <Link style={{paddingRight:"10px"}} href="https://mp.weixin.qq.com/s?__biz=Mzg5OTYzNTQ1Mg==&mid=2247484105&idx=1&sn=e3ae778c7c3cc3be4179d5a964867c38&chksm=c051035af7268a4cc43bb252abc60eb33f391a83c3f6fa0e83e79b804c13357d96ebd4924b46&token=1379698303&lang=zh_CN#rd">
           网盘快速下载链接
         </Link> */}
-       <div className={styles.head}>
-        <p>手机端用户注意右侧依然有内容</p>
-       <Link href="./gameDocs" style={{paddingRight:"10px"}}>前置教程</Link>
-        <Link href="./download" style={{paddingRight:"10px"}}>加速下载</Link>
+        <div className={styles.tip}>
+          手机端的朋友注意右侧还有内容
+        </div>
+       <Link href="./gameDocs" className={styles.link} style={{paddingRight:"10px"}}>前置教程</Link>
+        <Link href="./download" className={styles.link} style={{paddingRight:"10px"}}>加速下载</Link>
        <Input.Search placeholder="搜索" allowClear onSearch={onSearch} style={{ width: 200,maxHeight:40 }} />
-       </div>
         </Header>
      {data.loading?  
      <Skeleton  paragraph={{ rows: 8 }} />
-     :<Table columns={columns}  dataSource={data.games} key={"id"} pagination={{ pageSize: 30}} scroll={{ y: 400 }} />}
+     :<Table columns={columns}  dataSource={data.games} key={"id"} pagination={{ pageSize: 30}} scroll={{ y: 500 }} />}
     </div>
   );
 }

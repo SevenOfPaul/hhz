@@ -1,17 +1,46 @@
-.header h1{
-    margin :1%;
-  }
-  .content{
+.header h1 {
+  margin: 1%;
+}
+.content {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: center;
+  flex-wrap: wrap;
+  .children {
     display: flex;
     flex-direction: row;
-    justify-content: flex-end;
     align-items: center;
     flex-wrap: wrap;
-   div{
+    * {
+      margin: 1%;
+    }
+  }
+  .btns {
     display: flex;
     flex-direction: row;
-    .btn{
-      margin :2%;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    .btn {
+      margin: 2%;
     }
-   }
   }
+}
+@media (max-width: 1080px) {
+  .children {
+    width: 100%;
+  }
+  .btns {
+    width: 100%;
+  }
+}
+@media (min-width: 1079px) {
+  .children {
+    justify-content: flex-end;
+    width: 70%;
+  }
+  .btns {
+    width: 30%;
+  }
+}
+
