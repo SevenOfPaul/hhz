@@ -8,6 +8,7 @@ import Meta from "@/components/Meta";
 import img from "../public/gzh.jpg"
 import { code1HasCode2 } from '@/hooks/searchHook'
 export default function Home() {
+  
   const columns = [
     {
       title: '序号',
