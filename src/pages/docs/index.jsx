@@ -11,7 +11,7 @@ import step5 from "../../public/step4.1.png"
 export default function index() {
   return (
     <div className={styles.docs}>
-      <Meta title={"下载页，你喜欢的游戏都在这里"} />
+      <Meta title={"Paul的游戏小屋!下载页，你喜欢的游戏都在这里"} />
       <Header title={"加速下载"}>
       <p style={{padding:'3px'}}>我这就是个转发页面，欢迎大家直接联系原作者 </p>
       <Link style={{padding:'3px'}} href="../download">返回下载页</Link>

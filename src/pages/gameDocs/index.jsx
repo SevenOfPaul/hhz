@@ -15,7 +15,7 @@ const imgs={
 export default function index() {
   return (
     <div className={styles.docs}>
-      <Meta title={"教程页，简介"} />
+      <Meta title={"Paul的游戏小屋!教程页，简介"} />
       <Header title={"游戏前置教程"}>
         <p style={{ padding: "3px" }}></p>
       </Header>
