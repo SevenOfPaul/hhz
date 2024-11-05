@@ -107,7 +107,7 @@ const handleOk = () => {
         </Header>
      {data.loading?  
      <Skeleton  paragraph={{ rows: 8 }} />
-     :<Table columns={columns}  dataSource={data.games} key={"id"} pagination={{ pageSize: 30}} scroll={{ y: 400 }} />}
+     :<Table columns={columns}  dataSource={data.games} key={"id"} pagination={{ pageSize: 35}} scroll={{ y: 400 }} />}
     </div>
   );
 }
