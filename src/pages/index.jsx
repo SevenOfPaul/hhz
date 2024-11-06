@@ -62,9 +62,9 @@ function changeCode(e){
   setCode(e.target.value)
 }
 const handleOk = () => {
-  if(code=="1937"){
+  if(code=="1935"){
     setIsModalOpen(false);
-    localStorage.setItem("code",1937);
+    localStorage.setItem("code",1935);
   }else{
     messageApi.open({
       type: 'warning',
