@@ -47,7 +47,7 @@ export default function Home() {
       width: 200,
     },
   ];
-
+const local_code=1935;
   let [defaultGames, setDefaultGames] = useState([]);
   function onSearch(cin) {
     setData({
@@ -66,9 +66,9 @@ export default function Home() {
     setCode(e.target.value);
   }
   const handleOk = () => {
-    if (code == "1935") {
+    if (code ==local_code) {
       setIsModalOpen(false);
-      localStorage.setItem("code", 1935);
+      localStorage.setItem("code", local_code);
     } else {
       messageApi.open({
         type: "warning",
@@ -78,7 +78,7 @@ export default function Home() {
   };
   useEffect(() => {
     (async () => {
-      if (localStorage.getItem("code") != "1935") {
+      if (localStorage.getItem("code") != local_code) {
         showModal();
       }
       const games = (await axios.get("/game")).games;
