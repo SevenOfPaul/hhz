@@ -47,7 +47,7 @@ export default function Home() {
       width: 200,
     },
   ];
-const local_code=1935;
+
   let [defaultGames, setDefaultGames] = useState([]);
   function onSearch(cin) {
     setData({
@@ -66,9 +66,9 @@ const local_code=1935;
     setCode(e.target.value);
   }
   const handleOk = () => {
-    if (code ==local_code) {
+    if (code == "1935") {
       setIsModalOpen(false);
-      localStorage.setItem("code", local_code);
+      localStorage.setItem("code", 1935);
     } else {
       messageApi.open({
         type: "warning",
@@ -78,7 +78,7 @@ const local_code=1935;
   };
   useEffect(() => {
     (async () => {
-      if (localStorage.getItem("code") != local_code) {
+      if (localStorage.getItem("code") != "1937") {
         showModal();
       }
       const games = (await axios.get("/game")).games;
@@ -103,9 +103,18 @@ const local_code=1935;
         <p>请输入验证码，验证码在关注公众号后发送验证码或点击菜单皆可。</p>
         <Input placeholder="请输入验证码" onChange={(e) => changeCode(e)} />
       </Modal>
-     <Meta title={"游戏合集，你喜欢的游戏都在这里"}>
-     <meta property="og:title" content={defaultGames.map(g=>g.name).join(" ")} key={defaultGames.map(g=>g.name).join(" ")} /></Meta>
-       <Header title={"游戏合集"}>
+      <Meta title={"游戏合集，你喜欢的游戏都在这里"}>
+        <Meta
+          property="og:title"
+          content={defaultGames.map((g) => g.name).join(" ")}
+          key={defaultGames.map((g) => g.name).join(" ")}
+        />
+      </Meta>
+      <script
+        async
+        src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"
+      ></script>
+      <Header title={"游戏合集"}>
         {/* <Link style={{paddingRight:"10px"}} href="https://mp.weixin.qq.com/s?__biz=Mzg5OTYzNTQ1Mg==&mid=2247484105&idx=1&sn=e3ae778c7c3cc3be4179d5a964867c38&chksm=c051035af7268a4cc43bb252abc60eb33f391a83c3f6fa0e83e79b804c13357d96ebd4924b46&token=1379698303&lang=zh_CN#rd">
           网盘快速下载链接
         </Link> */}
