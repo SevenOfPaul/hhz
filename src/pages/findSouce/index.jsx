@@ -1,5 +1,4 @@
 import styles from "./findSouce.module.scss";
-import Head from "next/head";
 import Header from "@/components/Header";
 import axios from "../../request/index";
 import Meta from "@/components/Meta";
