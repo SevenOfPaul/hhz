@@ -14,19 +14,18 @@ export default function findSouce() {
 
 async function submit(data){
 const res=await axios.post("/addSouce",JSON.stringify({game:Gamepad(data,["name","desc"])}));
-message.error("暂未开放！")
-  // message.info(res.message);
-  // if(res.success){
-  //     message.info(res.message);
-  //     setTimeout(()=>{
-  //           redirect("./")
-  //     },1000)
-  // }else{
-  //       message.error(res.message);
-  // }
-  // for(let key in data){
-  //   data[key]="";
-  // } 
+  message.info(res.message);
+  if(res.status=="200"){
+      message.info(res.message);
+      setTimeout(()=>{
+            redirect("./")
+      },1000)
+  }else{
+        message.error(res.message);
+  }
+  for(let key in data){
+    data[key]="";
+  } 
 }
   return (
     <div className={styles.page}>
