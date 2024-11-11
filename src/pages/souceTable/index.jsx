@@ -39,7 +39,6 @@ export default function Home() {
       width: 200,
     },
   ];
-const local_code=1935;
   let [defaultGames, setDefaultGames] = useState([]);
   function onSearch(cin) {
     setData({
@@ -48,17 +47,12 @@ const local_code=1935;
     });
   }
   let [data, setData] = useState({ loading: true, games: [] });
-  const [isModalOpen, setIsModalOpen] = useState(false);
-  const [messageApi, contextHolder] = message.useMessage();
-  const showModal = () => {
-    setIsModalOpen(true);
-  };
   useEffect(() => {
     (async () => {
       if (localStorage.getItem("code") != local_code) {
         showModal();
       }
-      const games = (await axios.get("/game")).games;
+      const games = (await axios.get("/getSouce")).games;
       setDefaultGames(games);
       setData({ loading: false, games });
       // return ()=>{}
