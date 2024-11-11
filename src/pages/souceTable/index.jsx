@@ -73,6 +73,13 @@ export default function Home() {
         >
           求资源
         </Link>
+        <Link
+          href="./"
+          className={styles.link}
+          style={{ paddingRight: "10px" }}
+        >
+          回到首页
+        </Link>
       </Header>
       {data.loading ? (
         <Skeleton paragraph={{ rows: 8 }} />
