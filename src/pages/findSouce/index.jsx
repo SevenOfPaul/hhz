@@ -6,13 +6,14 @@ import Meta from "@/components/Meta";
 import { Input,Button,Form,Typography  } from 'antd';
 import { redirect } from 'next/navigation'
 import { EditFilled } from "@ant-design/icons/lib";
+import {Gamepad} from "@/hooks/Adapter"
 import { message } from "antd";
 const { TextArea } = Input;
 const { Title, Paragraph, Text, Link } = Typography;
 export default function findSouce() {
 
 async function submit(data){
-// const res=await axios.post("/addGame",JSON.stringify({game:Gamepad(data)}));
+const res=await axios.post("/addSouce",JSON.stringify({game:Gamepad(data,["name","desc"])}));
 message.error("暂未开放！")
   // message.info(res.message);
   // if(res.success){

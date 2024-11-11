@@ -9,7 +9,7 @@ import { message } from "antd";
 export default function Edit() {
 
 async function submit(data){
-const res=await axios.post("/addGame",JSON.stringify({game:Gamepad(data)}));
+const res=await axios.post("/addGame",JSON.stringify({game:Gamepad(data,["name","android","pc","info","desc"])}));
   message.info(res.message);
   for(let key in data){
     data[key]="";

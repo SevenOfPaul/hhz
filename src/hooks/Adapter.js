@@ -1,11 +1,9 @@
 import { nanoid } from "nanoid";
 
-export function Gamepad(obj){
+export function Gamepad(obj,parmas){
     obj.id=nanoid();
-    obj.name=obj.name||""
-    obj.android=obj.android||""
-    obj.pc=obj.pc||""
-    obj.info=obj.info||""
-    obj.desc=obj.desc||""
+    for(let v of parmas){
+        obj[v]=obj[v]||""
+    }
     return obj
 }
