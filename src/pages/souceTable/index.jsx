@@ -5,7 +5,6 @@ import Header from "@/components/Header";
 import axios from "../../request/index";
 import { useEffect, useState } from "react";
 import Meta from "@/components/Meta";
-import { code1HasCode2 } from "@/hooks/searchHook";
 export default function Home() {
   const columns = [
     {
@@ -21,37 +20,32 @@ export default function Home() {
       title: "游戏名",
       dataIndex: "name",
       width: 200,
-      align: "center",
-      render(text, record) {
-        return <Link href={record.desc}>{text}</Link>;
-      },
+      align: "center"
     },
     {
       title: "游戏描述",
-      dataIndex: "android",
+      dataIndex: "desc",
       width: 300,
       align: "center",
     },
     {
       title: "状态",
-      dataIndex: "pc",
+      dataIndex: "status",
       align: "center",
       width: 200,
+      render(text, record) {
+      if(record.status==1){
+        return "资源已上传，快去公众号查看吧！"
+      }else{
+        return "群主正在奋力寻找，请耐心等待！"
+      }
+      },
     },
   ];
   let [defaultGames, setDefaultGames] = useState([]);
-  function onSearch(cin) {
-    setData({
-      loading: false,
-      games: defaultGames.filter((g) => code1HasCode2(g.name, cin)),
-    });
-  }
   let [data, setData] = useState({ loading: true, games: [] });
   useEffect(() => {
     (async () => {
-      if (localStorage.getItem("code") != local_code) {
-        showModal();
-      }
       const games = (await axios.get("/getSouce")).games;
       setDefaultGames(games);
       setData({ loading: false, games });
@@ -60,7 +54,7 @@ export default function Home() {
   }, []);
   return (
     <div className={styles.page}>
-      <Meta title={"paul的资源小屋，游戏合集，你喜欢的游戏都在这里"}>
+      <Meta title={"paul的资源小屋，资源们都在这了"}>
         <Meta
           property="og:title"
           content={defaultGames.map((g) => g.name).join(" ")}
@@ -79,12 +73,6 @@ export default function Home() {
         >
           求资源
         </Link>
-        <Input.Search
-          placeholder="搜索"
-          allowClear
-          onSearch={onSearch}
-          style={{ width: 200, maxHeight: 40 }}
-        />
       </Header>
       {data.loading ? (
         <Skeleton paragraph={{ rows: 8 }} />
