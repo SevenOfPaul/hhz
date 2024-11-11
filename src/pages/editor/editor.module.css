@@ -7,4 +7,9 @@
     width:20%;
     height: 40px;
   }
+  .souceWall{
+    display: flex;
+    padding-left: 23%;
+    flex-direction: row;
+  }
   

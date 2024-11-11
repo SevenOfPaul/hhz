@@ -4,8 +4,9 @@ import Header from "@/components/Header";
 import axios from "../../request/index";
 import Meta from "@/components/Meta";
 import { Gamepad } from "@/hooks/Adapter";
-import { Input,Button,Form } from 'antd';
+import { Input,Button,Form ,Switch,Select } from 'antd';
 import { message } from "antd";
+import { useState } from "react";
 export default function Edit() {
 
 async function submit(data){
@@ -14,7 +15,11 @@ const res=await axios.post("/addGame",JSON.stringify({game:Gamepad(data,["name",
   for(let key in data){
     data[key]="";
   }
-  
+}
+let [optipns,getOptions]=useState([]);
+function changeStatusAndGetSouce(e){
+  console.log(e)
+  changeIsSouceGame(e)
 }
   return (
     <div className={styles.page}>
@@ -36,6 +41,21 @@ const res=await axios.post("/addGame",JSON.stringify({game:Gamepad(data,["name",
       rules={[{ required: true, message: '请输入游戏名' }]}
     >
       <Input />
+    </Form.Item>
+<Form.Item
+      label="是否关联资源墙"
+      name="isSouceGame"
+    >
+    <Switch onChange={changeStatusAndGetSouce}/>
+    </Form.Item>
+    <Form.Item
+     label="资源墙ID"
+     name="id">
+    <Select
+      style={{ width: 120 }}
+      // onChange={handleChange}
+      options={optipns}
+    />
     </Form.Item>
 
     <Form.Item

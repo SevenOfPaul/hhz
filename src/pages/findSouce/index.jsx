@@ -1,4 +1,4 @@
-// import styles from "./findSouce.module.scss";
+import styles from "./findSouce.module.scss";
 import Header from "@/components/Header";
 import axios from "../../request/index";
 import Meta from "@/components/Meta";
@@ -27,7 +27,7 @@ const res=await axios.post("/postSouce",JSON.stringify({game:Gamepad(data,["name
   } 
 }
   return (
-    <div>
+    <div className={styles.page}>
      <Meta title={"求资源"}/>
       <Header title={"求资源板块"}>
         <Link href="./souceTable">查看所有“求资源”提交记录</Link>
