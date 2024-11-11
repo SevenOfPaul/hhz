@@ -3,7 +3,6 @@ import docs01 from "../../public/docs01.jpg"
 import docs02 from "../../public/docs02.jpg"
 import docs03 from "../../public/docs03.jpg"  
 import docs04 from "../../public/docs04.jpg"
-import docs05 from "../../public/docs05.jpg"
 import Header from "@/components/Header";
 import styles from "./gameDocs.module.css";
 import Meta from "../../components/Meta";
@@ -13,8 +12,7 @@ const imgs={
     docs01:docs01,
     docs02: docs02,
     docs03:docs03,
-    docs04:docs04,
-    docs04:docs05
+    docs04:docs04
 }
 export default function index() {
   return (
