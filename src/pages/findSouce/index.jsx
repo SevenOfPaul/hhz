@@ -4,21 +4,21 @@ import Header from "@/components/Header";
 import axios from "../../request/index";
 import Meta from "@/components/Meta";
 import { Input,Button,Form,Typography  } from 'antd';
-import { redirect } from 'next/navigation'
+import { useRouter } from 'next/navigation'
 import { EditFilled } from "@ant-design/icons/lib";
 import {Gamepad} from "@/hooks/Adapter"
 import { message } from "antd";
 const { TextArea } = Input;
 const { Title, Paragraph, Text, Link } = Typography;
 export default function findSouce() {
-
+  const router = useRouter()
 async function submit(data){
-const res=await axios.post("/addSouce",JSON.stringify({game:Gamepad(data,["name","desc"])}));
-  message.info(res.message);
-  if(res.status=="200"){
-      message.info(res.message);
+  
+const res=await axios.post("/postSouce",JSON.stringify({game:Gamepad(data,["name","desc"])}));
+  if(res.success){
+      message.info(res.message+"即将回到首页");
       setTimeout(()=>{
-            redirect("./")
+        router.push("/")
       },1000)
   }else{
         message.error(res.message);
@@ -67,7 +67,7 @@ const res=await axios.post("/addSouce",JSON.stringify({game:Gamepad(data,["name"
       name="desc"
       rules={[{required: true, message: '把你想要的游戏的简介复制粘贴下来，帮助博主确定游戏！' }]}
     >
-        <TextArea rows={4} placeholder="游戏描述" maxLength={4} />
+        <TextArea rows={4} placeholder="游戏描述" maxLength={2000} />
     </Form.Item>
     <Form.Item wrapperCol={{ offset: 8, span: 16 }}>
       <Button type="primary" htmlType="submit">
