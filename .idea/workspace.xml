@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="65e55f7c-595e-4a77-b429-35b9431c12ad" name="更改" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/_2024_10_24_10_55____.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/在进行更新之前于_2024_10_24_10_55_取消提交了更改_[更改]/shelved.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/functions/games.json" beforeDir="false" afterPath="$PROJECT_DIR$/functions/games.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pnpm-lock.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/pnpm-lock.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/gameDocs/docs.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/gameDocs/docs.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/gameDocs/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/gameDocs/index.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/layout.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/layout.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/page.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/page.module.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/public/docs05.png" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="PackageJsonUpdateNotifier">
+    <dismissed value="$PROJECT_DIR$/package.json" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "git-widget-placeholder": "work"
+  }
+}]]></component>
+  <component name="TaskManager">
+    <servers />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="LAST_COMMIT_MESSAGE" value="" />
+  </component>
+</project>

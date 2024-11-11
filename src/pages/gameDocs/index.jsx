@@ -1,7 +1,8 @@
 import React from "react";
 import docs01 from "../../public/docs01.jpg"
 import docs02 from "../../public/docs02.jpg"
-import docs03 from "../../public/docs03.jpg"
+import docs03 from "../../public/docs03.jpg"  
+import docs04 from "../../public/docs04.jpg"
 import Header from "@/components/Header";
 import styles from "./gameDocs.module.css";
 import Meta from "../../components/Meta";
@@ -10,12 +11,13 @@ import docs from "./docs.json" assert {type: "json"}
 const imgs={
     docs01:docs01,
     docs02: docs02,
-    docs03:docs03
+    docs03:docs03,
+    docs04:docs04
 }
 export default function index() {
   return (
     <div className={styles.docs}>
-      <Meta title={"教程页，简介"} />
+      <Meta title={"Paul的游戏小屋!教程页，简介"} />
       <Header title={"游戏前置教程"}>
         <p style={{ padding: "3px" }}></p>
       </Header>
