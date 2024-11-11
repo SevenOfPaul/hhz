@@ -10,7 +10,7 @@ import docs from "./docs.json" assert {type: "json"}
 const imgs={
     docs01:docs01,
     docs02: docs02,
-    docs03:docs03,
+    docs03:docs03
 }
 export default function index() {
   return (
@@ -29,7 +29,7 @@ export default function index() {
             <List.Item
               key={item.question}
               extra={
-                <Image width={272} alt="logo" src={imgs[item.img].src} />
+                <Image width={272} alt="logo" src={imgs[item.img]?imgs[item.img].src:""} />
               }
             >
               <List.Item.Meta
