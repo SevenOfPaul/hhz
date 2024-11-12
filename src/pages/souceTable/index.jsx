@@ -10,7 +10,7 @@ export default function Home() {
     {
       title: "序号",
       dataIndex: "idx",
-      width: 100,
+      width: 50,
       align: "center",
       render(text, record, idx) {
         return <p>{idx + 1}</p>;
@@ -19,20 +19,20 @@ export default function Home() {
     {
       title: "游戏名",
       dataIndex: "name",
-      width: 200,
+      width: 120,
       align: "center"
     },
     {
       title: "游戏描述",
       dataIndex: "desc",
-      width: 300,
+      width: 200,
       align: "center",
     },
     {
       title: "状态",
       dataIndex: "status",
       align: "center",
-      width: 200,
+      width: 150,
       render(text, record) {
       if(record.status==1){
         return "资源已上传，快去公众号查看吧！"

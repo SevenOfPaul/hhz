@@ -33,7 +33,7 @@ const res=await axios.post("/postSouce",JSON.stringify({game:Gamepad(data,["name
         <Link href="./souceTable">查看所有“求资源”提交记录</Link>
       </Header>
       <Typography>
-          <Title><EditFilled/>须知 <span styles={{color:"red"}}>暂未开放</span></Title>
+          <Title><EditFilled/>须知</Title>
            <Paragraph>
              <Text strong>
            免费的资源查找不具有时效性，如果实在着急可以在咸鱼付费下单，找不到免费退款！
@@ -51,7 +51,6 @@ const res=await axios.post("/postSouce",JSON.stringify({game:Gamepad(data,["name
     style={{ maxWidth: 600 }}
     autoComplete="off"
     onFinish={submit}
-    // onFinishFailed={onFinishFailed}
   >
     <Form.Item
       label="游戏名"
