@@ -66,6 +66,7 @@ export default function Home() {
   function changeCode(e) {
     setCode(e.target.value);
   }
+  const local_code=1935;
   const handleOk = () => {
     if (code == local_code) {
       setIsModalOpen(false);
