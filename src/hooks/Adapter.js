@@ -7,3 +7,9 @@ export function Gamepad(obj,parmas){
     }
     return obj
 }
+export function bindSouce(obj,parmas){
+    for(let v of parmas){
+        obj[v]=obj[v]||""
+    }
+    return obj
+}

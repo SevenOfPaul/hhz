@@ -3,23 +3,30 @@ import Head from "next/head";
 import Header from "@/components/Header";
 import axios from "../../request/index";
 import Meta from "@/components/Meta";
-import { Gamepad } from "@/hooks/Adapter";
+import { bindSouce  } from "@/hooks/Adapter";
 import { Input,Button,Form ,Switch,Select } from 'antd';
 import { message } from "antd";
 import { useState } from "react";
 export default function Edit() {
 
 async function submit(data){
-const res=await axios.post("/addGame",JSON.stringify({game:Gamepad(data,["name","android","pc","info","desc"])}));
+const res=await axios.post("/addGame",JSON.stringify({game:bindSouce(data,["id","name","isSouceGame","android","pc","info","desc"])}));
   message.info(res.message);
   for(let key in data){
     data[key]="";
   }
 }
-let [optipns,getOptions]=useState([]);
-function changeStatusAndGetSouce(e){
-  console.log(e)
-  changeIsSouceGame(e)
+let [optipns,setOptions]=useState([]);
+let [loading,setLoading]=useState(false);
+let [isSouceGame,setIsSouceGame]=useState(false);
+async function changeStatusAndGetSouce(v){
+  setLoading(true);
+  if(v==true){
+    setIsSouceGame(true);
+    const options = (await axios.get("/bindSouce")).games;
+    setOptions(options.map(k=>{return {value:k.id,label:k.name}}))
+  }
+  setLoading(false);
 }
   return (
     <div className={styles.page}>
@@ -33,7 +40,6 @@ function changeStatusAndGetSouce(e){
     style={{ maxWidth: 600 }}
     autoComplete="off"
     onFinish={submit}
-    // onFinishFailed={onFinishFailed}
   >
     <Form.Item
       label="游戏名"
@@ -45,15 +51,17 @@ function changeStatusAndGetSouce(e){
 <Form.Item
       label="是否关联资源墙"
       name="isSouceGame"
+      rules={[{ required:true  }]}
     >
-    <Switch onChange={changeStatusAndGetSouce}/>
+    <Switch onChange={changeStatusAndGetSouce}   loading={loading}/>
     </Form.Item>
     <Form.Item
      label="资源墙ID"
+     rules={[{ required:isSouceGame?true:false  }]}
      name="id">
     <Select
       style={{ width: 120 }}
-      // onChange={handleChange}
+      onChange={changeStatusAndGetSouce}
       options={optipns}
     />
     </Form.Item>

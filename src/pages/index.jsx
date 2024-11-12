@@ -49,6 +49,7 @@ export default function Home() {
   ];
 
   let [defaultGames, setDefaultGames] = useState([]);
+  const local_code="1935";
   function onSearch(cin) {
     setData({
       loading: false,
@@ -66,9 +67,9 @@ export default function Home() {
     setCode(e.target.value);
   }
   const handleOk = () => {
-    if (code == "1935") {
+    if (code == local_code) {
       setIsModalOpen(false);
-      localStorage.setItem("code", 1935);
+      localStorage.setItem("code", local_code);
     } else {
       messageApi.open({
         type: "warning",
@@ -78,7 +79,7 @@ export default function Home() {
   };
   useEffect(() => {
     (async () => {
-      if (localStorage.getItem("code") != "1937") {
+      if (localStorage.getItem("code") != local_code) {
         showModal();
       }
       const games = (await axios.get("/game")).games;
@@ -115,9 +116,6 @@ export default function Home() {
         src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"
       ></script>
       <Header title={"游戏合集"}>
-        {/* <Link style={{paddingRight:"10px"}} href="https://mp.weixin.qq.com/s?__biz=Mzg5OTYzNTQ1Mg==&mid=2247484105&idx=1&sn=e3ae778c7c3cc3be4179d5a964867c38&chksm=c051035af7268a4cc43bb252abc60eb33f391a83c3f6fa0e83e79b804c13357d96ebd4924b46&token=1379698303&lang=zh_CN#rd">
-          网盘快速下载链接
-        </Link> */}
         <div className={styles.tip}>手机端的朋友注意右侧还有内容</div>
         <Link
           href="./gameDocs"
