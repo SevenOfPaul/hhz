@@ -51,7 +51,6 @@ async function changeStatusAndGetSouce(v){
 <Form.Item
       label="是否关联资源墙"
       name="isSouceGame"
-      rules={[{ required:true  }]}
     >
     <Switch onChange={changeStatusAndGetSouce}   loading={loading}/>
     </Form.Item>
