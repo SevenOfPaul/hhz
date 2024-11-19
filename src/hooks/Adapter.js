@@ -9,11 +9,10 @@ export function Gamepad(obj,parmas){
 }
 export function bindSouce(obj,parmas){
     for(let v of parmas){
-      if(v=="id"&&obj[v]!==""){
         obj[v]=obj[v]||""
-      }else{
+    }
+    if(parmas.find(k=>k=="id")){
         obj.id=nanoid();
       }
-    }
     return obj
 }
