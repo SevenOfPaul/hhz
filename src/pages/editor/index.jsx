@@ -56,7 +56,6 @@ async function changeStatusAndGetSouce(v){
     </Form.Item>
     <Form.Item
      label="资源墙ID"
-     rules={[{ required:isSouceGame?true:false  }]}
      name="id">
     <Select
       style={{ width: 120 }}
