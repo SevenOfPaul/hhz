@@ -52,10 +52,11 @@ async function changeStatusAndGetSouce(v){
       label="是否关联资源墙"
       name="isSouceGame"
     >
-    <Switch onChange={changeStatusAndGetSouce}   loading={loading}/>
+    <Switch onChange={changeStatusAndGetSouce} defaultValue={false}  loading={loading}/>
     </Form.Item>
     <Form.Item
      label="资源墙ID"
+     rules={[{ required:isSouceGame?true:false  }]}
      name="id">
     <Select
       style={{ width: 120 }}
