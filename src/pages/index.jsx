@@ -79,9 +79,6 @@ export default function Home() {
   };
   useEffect(() => {
     (async () => {
-      if (localStorage.getItem("code") != local_code) {
-        showModal();
-      }
       const games = (await axios.get("/game")).games;
       setDefaultGames(games);
       setData({ loading: false, games });
