@@ -23,7 +23,7 @@ export default function Header(props) {
     <div className={styles.btns}>
      <Button type="primary"  className={styles.btn} onClick={()=>info("关注博主",<img src={img.src}   width={300}
       height={300} />)}>关注博主</Button>
-      <Button type="primary"  className={styles.btn}  onClick={()=>info("加入我们","q群：221666602")}>加入我们</Button>
+      <Button type="primary"  className={styles.btn}  onClick={()=>info("加入我们","q群：767687594")}>加入我们</Button>
   </div>
     </div>
     </div>
