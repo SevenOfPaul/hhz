@@ -8,10 +8,13 @@ import { Input,Button,Form ,Switch,Select } from 'antd';
 import { message } from "antd";
 import { useState } from "react";
 export default function Edit() {
-
+const [id,setId]=useState("");
 async function submit(data){
-const res=await axios.post("/addGame",JSON.stringify({game:bindSouce(data,["id","name","isSouceGame","android","pc","info","desc"])}));
-  message.info(res.message);
+  const game=bindSouce(data,["id","name","isSouceGame","android","pc","info","desc"]);
+  setId(game.id);
+const res=await axios.post("/addGame",JSON.stringify({game}));
+
+  message.info(res.message+game.id);
   for(let key in data){
     data[key]="";
   }
@@ -98,6 +101,7 @@ async function changeStatusAndGetSouce(v){
       </Button>
     </Form.Item>
   </Form>
+  <h2>游戏id：{id}</h2>
     </div>
   );
 }
